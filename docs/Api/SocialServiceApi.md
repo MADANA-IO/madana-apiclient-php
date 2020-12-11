@@ -1,21 +1,22 @@
 # OpenAPI\Client\SocialServiceApi
 
-All URIs are relative to *http://api.madana.io/rest*
+All URIs are relative to http://api.madana.io/rest.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getMyProfile**](SocialServiceApi.md#getMyProfile) | **GET** /social/profiles/me | 
-[**getPlatforms2**](SocialServiceApi.md#getPlatforms2) | **GET** /social | Returns all Platforms / Systems that can be Connected to the MADANA Service.
-[**getRanking**](SocialServiceApi.md#getRanking) | **GET** /social/ranking | Returns the Ranking by PTS within the System.
-[**getSocialPlatformFeed**](SocialServiceApi.md#getSocialPlatformFeed) | **GET** /social/feed/{platform} | 
-[**getUserProfile**](SocialServiceApi.md#getUserProfile) | **GET** /social/profiles/{username} | 
-[**getUserProfile_0**](SocialServiceApi.md#getUserProfile_0) | **GET** /social/profiles/{username}/simple | 
+[**getMyProfile()**](SocialServiceApi.md#getMyProfile) | **GET** /social/profiles/me | 
+[**getPlatforms2()**](SocialServiceApi.md#getPlatforms2) | **GET** /social | Returns all Platforms / Systems that can be Connected to the MADANA Service.
+[**getRanking()**](SocialServiceApi.md#getRanking) | **GET** /social/ranking | Returns the Ranking by PTS within the System.
+[**getSocialPlatformFeed()**](SocialServiceApi.md#getSocialPlatformFeed) | **GET** /social/feed/{platform} | 
+[**getUserProfile()**](SocialServiceApi.md#getUserProfile) | **GET** /social/profiles/{username} | 
+[**getUserProfile_0()**](SocialServiceApi.md#getUserProfile_0) | **GET** /social/profiles/{username}/simple | 
 
 
+## `getMyProfile()`
 
-## getMyProfile
-
-> \SplFileObject getMyProfile()
+```php
+getMyProfile(): \SplFileObject
+```
 
 
 
@@ -24,6 +25,7 @@ Method | HTTP request | Description
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\SocialServiceApi(
@@ -38,7 +40,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling SocialServiceApi->getMyProfile: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -56,16 +57,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getPlatforms2()`
 
-## getPlatforms2
-
-> \SplFileObject getPlatforms2()
+```php
+getPlatforms2(): \SplFileObject
+```
 
 Returns all Platforms / Systems that can be Connected to the MADANA Service.
 
@@ -76,6 +78,7 @@ Returns all Platforms / Systems that can be Connected to the MADANA Service
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\SocialServiceApi(
@@ -90,7 +93,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling SocialServiceApi->getPlatforms2: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -108,16 +110,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getRanking()`
 
-## getRanking
-
-> \SplFileObject getRanking($limit, $offset)
+```php
+getRanking($limit, $offset): \SplFileObject
+```
 
 Returns the Ranking by PTS within the System.
 
@@ -130,13 +133,14 @@ Returns the Ranking by PTS within the System
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\SocialServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$limit = '99'; // string | 
-$offset = '0'; // string | 
+$limit = '99'; // string
+$offset = '0'; // string
 
 try {
     $result = $apiInstance->getRanking($limit, $offset);
@@ -144,11 +148,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling SocialServiceApi->getRanking: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -166,16 +168,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getSocialPlatformFeed()`
 
-## getSocialPlatformFeed
-
-> \SplFileObject getSocialPlatformFeed($platform)
+```php
+getSocialPlatformFeed($platform): \SplFileObject
+```
 
 
 
@@ -186,12 +189,13 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\SocialServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$platform = 'platform_example'; // string | 
+$platform = 'platform_example'; // string
 
 try {
     $result = $apiInstance->getSocialPlatformFeed($platform);
@@ -199,11 +203,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling SocialServiceApi->getSocialPlatformFeed: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -220,16 +222,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getUserProfile()`
 
-## getUserProfile
-
-> \SplFileObject getUserProfile($username, $simple)
+```php
+getUserProfile($username, $simple): \SplFileObject
+```
 
 
 
@@ -240,13 +243,14 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\SocialServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$username = 'username_example'; // string | 
-$simple = 'false'; // string | 
+$username = 'username_example'; // string
+$simple = 'false'; // string
 
 try {
     $result = $apiInstance->getUserProfile($username, $simple);
@@ -254,11 +258,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling SocialServiceApi->getUserProfile: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -276,16 +278,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getUserProfile_0()`
 
-## getUserProfile_0
-
-> \SplFileObject getUserProfile_0($username)
+```php
+getUserProfile_0($username): \SplFileObject
+```
 
 
 
@@ -296,12 +299,13 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\SocialServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$username = 'username_example'; // string | 
+$username = 'username_example'; // string
 
 try {
     $result = $apiInstance->getUserProfile_0($username);
@@ -309,11 +313,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling SocialServiceApi->getUserProfile_0: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -330,9 +332,8 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

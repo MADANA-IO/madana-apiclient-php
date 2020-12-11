@@ -4,23 +4,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cpu_physical_cores** | **int** |  | [optional] 
-**cpu_model** | **string** |  | [optional] 
-**cpu_frequency** | **string** |  | [optional] 
-**public_key** | **string** |  | [optional] 
-**operating_system** | **string** |  | [optional] 
-**operating_system_uptime** | **float** |  | [optional] 
-**cpu_logical_count** | **int** |  | [optional] 
-**ipfs_info** | [**\OpenAPI\Client\Model\JsonIPFSSystemInfo**](JsonIPFSSystemInfo.md) |  | [optional] 
-**status** | **string** |  | [optional] 
-**processors** | **string[]** |  | [optional] 
-**owner** | **string** |  | [optional] 
-**hardware_firmware** | **string** |  | [optional] 
-**connection_url** | **string** |  | [optional] 
-**hardware_baseboard** | **string** |  | [optional] 
-**cpu_family** | **string** |  | [optional] 
-**memory** | **string** |  | [optional] 
+**hardware_firmware** | **string** |  | [optional]
+**sgx_info** | [**\OpenAPI\Client\Model\JsonSGXInfo**](JsonSGXInfo.md) |  | [optional]
+**cpu_family** | **string** |  | [optional]
+**cpu_frequency** | **string** |  | [optional]
+**cpu_logical_count** | **int** |  | [optional]
+**processors** | **string[]** |  | [optional]
+**cpu_physical_cores** | **int** |  | [optional]
+**operating_system_uptime** | **float** |  | [optional]
+**status** | **string** |  | [optional]
+**owner** | **string** |  | [optional]
+**cpu_model** | **string** |  | [optional]
+**memory** | **string** |  | [optional]
+**connection_url** | **string** |  | [optional]
+**public_key** | **string** |  | [optional]
+**hardware_baseboard** | **string** |  | [optional]
+**operating_system** | **string** |  | [optional]
+**ipfs_info** | [**\OpenAPI\Client\Model\JsonIPFSSystemInfo**](JsonIPFSSystemInfo.md) |  | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

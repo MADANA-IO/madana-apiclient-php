@@ -1,18 +1,19 @@
 # OpenAPI\Client\DataCollectionServiceApi
 
-All URIs are relative to *http://api.madana.io/rest*
+All URIs are relative to http://api.madana.io/rest.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getMethodsForType**](DataCollectionServiceApi.md#getMethodsForType) | **GET** /datacollection/types/{name}/methods | 
-[**getNodes**](DataCollectionServiceApi.md#getNodes) | **GET** /datacollection/methods | 
-[**getTypes**](DataCollectionServiceApi.md#getTypes) | **GET** /datacollection/types | 
+[**getMethodsForType()**](DataCollectionServiceApi.md#getMethodsForType) | **GET** /datacollection/types/{name}/methods | 
+[**getNodes()**](DataCollectionServiceApi.md#getNodes) | **GET** /datacollection/methods | 
+[**getTypes()**](DataCollectionServiceApi.md#getTypes) | **GET** /datacollection/types | 
 
 
+## `getMethodsForType()`
 
-## getMethodsForType
-
-> \SplFileObject getMethodsForType($name)
+```php
+getMethodsForType($name): \SplFileObject
+```
 
 
 
@@ -23,12 +24,13 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\DataCollectionServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$name = 'name_example'; // string | 
+$name = 'name_example'; // string
 
 try {
     $result = $apiInstance->getMethodsForType($name);
@@ -36,11 +38,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DataCollectionServiceApi->getMethodsForType: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -57,16 +57,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getNodes()`
 
-## getNodes
-
-> \SplFileObject getNodes()
+```php
+getNodes(): \SplFileObject
+```
 
 
 
@@ -75,6 +76,7 @@ No authorization required
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\DataCollectionServiceApi(
@@ -89,7 +91,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DataCollectionServiceApi->getNodes: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -107,16 +108,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getTypes()`
 
-## getTypes
-
-> \SplFileObject getTypes()
+```php
+getTypes(): \SplFileObject
+```
 
 
 
@@ -125,6 +127,7 @@ No authorization required
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\DataCollectionServiceApi(
@@ -139,7 +142,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DataCollectionServiceApi->getTypes: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -157,9 +159,8 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

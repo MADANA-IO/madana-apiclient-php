@@ -18,6 +18,7 @@ docs/Api/SocialServiceApi.md
 docs/Api/SystemServiceApi.md
 docs/Api/UserServiceApi.md
 docs/Model/JsonDiskConfig.md
+docs/Model/JsonEnclavePort.md
 docs/Model/JsonEnclaveProcess.md
 docs/Model/JsonEnclaveRunRequest.md
 docs/Model/JsonEnclaveRunningAttestation.md
@@ -45,12 +46,15 @@ docs/Model/JsonNetworkInterface.md
 docs/Model/JsonNodeInfo.md
 docs/Model/JsonProcess.md
 docs/Model/JsonRunConfig.md
+docs/Model/JsonSGXInfo.md
 docs/Model/JsonSignedData.md
 docs/Model/JsonSignedDataUtils.md
 docs/Model/JsonWireguardInterface.md
 docs/Model/JsonWireguardInterfaceAllOf.md
 docs/Model/XmlNs0DiskConfig.md
 docs/Model/XmlNs0DiskConfigAllOf.md
+docs/Model/XmlNs0EnclavePort.md
+docs/Model/XmlNs0EnclavePortAllOf.md
 docs/Model/XmlNs0EnclaveProcess.md
 docs/Model/XmlNs0EnclaveProcessAllOf.md
 docs/Model/XmlNs0EnclaveRunningAttestation.md
@@ -75,6 +79,8 @@ docs/Model/XmlNs0NodeInfoAllOf.md
 docs/Model/XmlNs0Process.md
 docs/Model/XmlNs0RunConfig.md
 docs/Model/XmlNs0RunConfigAllOf.md
+docs/Model/XmlNs0SGXInfo.md
+docs/Model/XmlNs0SGXInfoAllOf.md
 docs/Model/XmlNs0SignedData.md
 docs/Model/XmlNs0SignedDataAllOf.md
 docs/Model/XmlNs0WireguardInterface.md
@@ -97,6 +103,7 @@ lib/ApiException.php
 lib/Configuration.php
 lib/HeaderSelector.php
 lib/Model/JsonDiskConfig.php
+lib/Model/JsonEnclavePort.php
 lib/Model/JsonEnclaveProcess.php
 lib/Model/JsonEnclaveRunRequest.php
 lib/Model/JsonEnclaveRunningAttestation.php
@@ -124,6 +131,7 @@ lib/Model/JsonNetworkInterface.php
 lib/Model/JsonNodeInfo.php
 lib/Model/JsonProcess.php
 lib/Model/JsonRunConfig.php
+lib/Model/JsonSGXInfo.php
 lib/Model/JsonSignedData.php
 lib/Model/JsonSignedDataUtils.php
 lib/Model/JsonWireguardInterface.php
@@ -131,6 +139,8 @@ lib/Model/JsonWireguardInterfaceAllOf.php
 lib/Model/ModelInterface.php
 lib/Model/XmlNs0DiskConfig.php
 lib/Model/XmlNs0DiskConfigAllOf.php
+lib/Model/XmlNs0EnclavePort.php
+lib/Model/XmlNs0EnclavePortAllOf.php
 lib/Model/XmlNs0EnclaveProcess.php
 lib/Model/XmlNs0EnclaveProcessAllOf.php
 lib/Model/XmlNs0EnclaveRunningAttestation.php
@@ -155,6 +165,8 @@ lib/Model/XmlNs0NodeInfoAllOf.php
 lib/Model/XmlNs0Process.php
 lib/Model/XmlNs0RunConfig.php
 lib/Model/XmlNs0RunConfigAllOf.php
+lib/Model/XmlNs0SGXInfo.php
+lib/Model/XmlNs0SGXInfoAllOf.php
 lib/Model/XmlNs0SignedData.php
 lib/Model/XmlNs0SignedDataAllOf.php
 lib/Model/XmlNs0WireguardInterface.php
@@ -175,6 +187,7 @@ test/Api/SocialServiceApiTest.php
 test/Api/SystemServiceApiTest.php
 test/Api/UserServiceApiTest.php
 test/Model/JsonDiskConfigTest.php
+test/Model/JsonEnclavePortTest.php
 test/Model/JsonEnclaveProcessTest.php
 test/Model/JsonEnclaveRunRequestTest.php
 test/Model/JsonEnclaveRunningAttestationApprovalAllOfTest.php
@@ -202,12 +215,15 @@ test/Model/JsonNetworkInterfaceTest.php
 test/Model/JsonNodeInfoTest.php
 test/Model/JsonProcessTest.php
 test/Model/JsonRunConfigTest.php
+test/Model/JsonSGXInfoTest.php
 test/Model/JsonSignedDataTest.php
 test/Model/JsonSignedDataUtilsTest.php
 test/Model/JsonWireguardInterfaceAllOfTest.php
 test/Model/JsonWireguardInterfaceTest.php
 test/Model/XmlNs0DiskConfigAllOfTest.php
 test/Model/XmlNs0DiskConfigTest.php
+test/Model/XmlNs0EnclavePortAllOfTest.php
+test/Model/XmlNs0EnclavePortTest.php
 test/Model/XmlNs0EnclaveProcessAllOfTest.php
 test/Model/XmlNs0EnclaveProcessTest.php
 test/Model/XmlNs0EnclaveRunningAttestationAllOfTest.php
@@ -232,6 +248,8 @@ test/Model/XmlNs0NodeInfoTest.php
 test/Model/XmlNs0ProcessTest.php
 test/Model/XmlNs0RunConfigAllOfTest.php
 test/Model/XmlNs0RunConfigTest.php
+test/Model/XmlNs0SGXInfoAllOfTest.php
+test/Model/XmlNs0SGXInfoTest.php
 test/Model/XmlNs0SignedDataAllOfTest.php
 test/Model/XmlNs0SignedDataTest.php
 test/Model/XmlNs0WireguardInterfaceAllOfTest.php

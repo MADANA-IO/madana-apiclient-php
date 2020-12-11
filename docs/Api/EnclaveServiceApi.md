@@ -1,24 +1,25 @@
 # OpenAPI\Client\EnclaveServiceApi
 
-All URIs are relative to *http://api.madana.io/rest*
+All URIs are relative to http://api.madana.io/rest.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addHistory**](EnclaveServiceApi.md#addHistory) | **POST** /enclaves/{uuid}/history | 
-[**approveEnclave**](EnclaveServiceApi.md#approveEnclave) | **POST** /enclaves/{uuid}/approval | 
-[**assignEnclaveAgent**](EnclaveServiceApi.md#assignEnclaveAgent) | **POST** /enclaves/{uuid}/assign | 
-[**attestateEnclave**](EnclaveServiceApi.md#attestateEnclave) | **POST** /enclaves/{uuid}/attestation | 
-[**createEnclaveRunRequest**](EnclaveServiceApi.md#createEnclaveRunRequest) | **POST** /enclaves | 
-[**getEnclave**](EnclaveServiceApi.md#getEnclave) | **GET** /enclaves/{uuid} | 
-[**getEnclaveTypes**](EnclaveServiceApi.md#getEnclaveTypes) | **GET** /enclaves/types | 
-[**getEnclaves**](EnclaveServiceApi.md#getEnclaves) | **GET** /enclaves | Returns UUIDs of existing analyses.
-[**killEnclave**](EnclaveServiceApi.md#killEnclave) | **POST** /enclaves/{uuid}/kill | 
+[**addHistory()**](EnclaveServiceApi.md#addHistory) | **POST** /enclaves/{uuid}/history | 
+[**approveEnclave()**](EnclaveServiceApi.md#approveEnclave) | **POST** /enclaves/{uuid}/approval | 
+[**assignEnclaveAgent()**](EnclaveServiceApi.md#assignEnclaveAgent) | **POST** /enclaves/{uuid}/assign | 
+[**attestateEnclave()**](EnclaveServiceApi.md#attestateEnclave) | **POST** /enclaves/{uuid}/attestation | 
+[**createEnclaveRunRequest()**](EnclaveServiceApi.md#createEnclaveRunRequest) | **POST** /enclaves | 
+[**getEnclave()**](EnclaveServiceApi.md#getEnclave) | **GET** /enclaves/{uuid} | 
+[**getEnclaveTypes()**](EnclaveServiceApi.md#getEnclaveTypes) | **GET** /enclaves/types | 
+[**getEnclaves()**](EnclaveServiceApi.md#getEnclaves) | **GET** /enclaves | Returns UUIDs of existing analyses.
+[**killEnclave()**](EnclaveServiceApi.md#killEnclave) | **POST** /enclaves/{uuid}/kill | 
 
 
+## `addHistory()`
 
-## addHistory
-
-> \SplFileObject addHistory($uuid, $body)
+```php
+addHistory($uuid, $body): \SplFileObject
+```
 
 
 
@@ -29,13 +30,14 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\EnclaveServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
-$body = new \OpenAPI\Client\Model\JsonSignedData(); // \OpenAPI\Client\Model\JsonSignedData | 
+$uuid = 'uuid_example'; // string
+$body = new \OpenAPI\Client\Model\JsonSignedData(); // \OpenAPI\Client\Model\JsonSignedData
 
 try {
     $result = $apiInstance->addHistory($uuid, $body);
@@ -43,11 +45,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnclaveServiceApi->addHistory: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -64,17 +64,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/xml
-- **Accept**: application/json
+- **Content-Type**: `application/json`, `application/xml`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `approveEnclave()`
 
-## approveEnclave
-
-> \SplFileObject approveEnclave($uuid, $body)
+```php
+approveEnclave($uuid, $body): \SplFileObject
+```
 
 
 
@@ -85,13 +86,14 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\EnclaveServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
-$body = new \OpenAPI\Client\Model\JsonEnclaveRunningAttestationApproval(); // \OpenAPI\Client\Model\JsonEnclaveRunningAttestationApproval | 
+$uuid = 'uuid_example'; // string
+$body = new \OpenAPI\Client\Model\JsonEnclaveRunningAttestationApproval(); // \OpenAPI\Client\Model\JsonEnclaveRunningAttestationApproval
 
 try {
     $result = $apiInstance->approveEnclave($uuid, $body);
@@ -99,11 +101,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnclaveServiceApi->approveEnclave: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -120,17 +120,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/xml
-- **Accept**: application/json
+- **Content-Type**: `application/json`, `application/xml`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `assignEnclaveAgent()`
 
-## assignEnclaveAgent
-
-> \SplFileObject assignEnclaveAgent($uuid, $body)
+```php
+assignEnclaveAgent($uuid, $body): \SplFileObject
+```
 
 
 
@@ -141,13 +142,14 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\EnclaveServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
-$body = new \OpenAPI\Client\Model\JsonNodeInfo(); // \OpenAPI\Client\Model\JsonNodeInfo | 
+$uuid = 'uuid_example'; // string
+$body = new \OpenAPI\Client\Model\JsonNodeInfo(); // \OpenAPI\Client\Model\JsonNodeInfo
 
 try {
     $result = $apiInstance->assignEnclaveAgent($uuid, $body);
@@ -155,11 +157,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnclaveServiceApi->assignEnclaveAgent: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -176,17 +176,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/xml
-- **Accept**: application/json
+- **Content-Type**: `application/json`, `application/xml`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `attestateEnclave()`
 
-## attestateEnclave
-
-> \SplFileObject attestateEnclave($uuid, $body)
+```php
+attestateEnclave($uuid, $body): \SplFileObject
+```
 
 
 
@@ -197,13 +198,14 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\EnclaveServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
-$body = new \OpenAPI\Client\Model\JsonEnclaveRunningAttestation(); // \OpenAPI\Client\Model\JsonEnclaveRunningAttestation | 
+$uuid = 'uuid_example'; // string
+$body = new \OpenAPI\Client\Model\JsonEnclaveRunningAttestation(); // \OpenAPI\Client\Model\JsonEnclaveRunningAttestation
 
 try {
     $result = $apiInstance->attestateEnclave($uuid, $body);
@@ -211,11 +213,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnclaveServiceApi->attestateEnclave: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -232,17 +232,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/xml
-- **Accept**: application/json
+- **Content-Type**: `application/json`, `application/xml`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `createEnclaveRunRequest()`
 
-## createEnclaveRunRequest
-
-> \SplFileObject createEnclaveRunRequest($body)
+```php
+createEnclaveRunRequest($body): \SplFileObject
+```
 
 
 
@@ -253,12 +254,13 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\EnclaveServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \OpenAPI\Client\Model\JsonEnclaveRunRequest(); // \OpenAPI\Client\Model\JsonEnclaveRunRequest | 
+$body = new \OpenAPI\Client\Model\JsonEnclaveRunRequest(); // \OpenAPI\Client\Model\JsonEnclaveRunRequest
 
 try {
     $result = $apiInstance->createEnclaveRunRequest($body);
@@ -266,11 +268,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnclaveServiceApi->createEnclaveRunRequest: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -286,17 +286,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json, application/xml
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`, `application/xml`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getEnclave()`
 
-## getEnclave
-
-> \SplFileObject getEnclave($uuid)
+```php
+getEnclave($uuid): \SplFileObject
+```
 
 
 
@@ -307,12 +308,13 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\EnclaveServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
+$uuid = 'uuid_example'; // string
 
 try {
     $result = $apiInstance->getEnclave($uuid);
@@ -320,11 +322,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnclaveServiceApi->getEnclave: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -341,16 +341,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getEnclaveTypes()`
 
-## getEnclaveTypes
-
-> \SplFileObject getEnclaveTypes()
+```php
+getEnclaveTypes(): \SplFileObject
+```
 
 
 
@@ -359,6 +360,7 @@ No authorization required
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\EnclaveServiceApi(
@@ -373,7 +375,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnclaveServiceApi->getEnclaveTypes: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -391,16 +392,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getEnclaves()`
 
-## getEnclaves
-
-> \SplFileObject getEnclaves($authorization, $created, $limit, $offset, $status)
+```php
+getEnclaves($authorization, $created, $limit, $offset, $status): \SplFileObject
+```
 
 Returns UUIDs of existing analyses.
 
@@ -413,6 +415,7 @@ Returns UUIDs of existing analyses.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\EnclaveServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -422,7 +425,7 @@ $authorization = 'authorization_example'; // string | Bearer eyJhbGciOiJIUzI1NiI
 $created = 'true'; // string | - if Queryparam \"created=true\" only the UUIDs of own Requests are shown
 $limit = '30'; // string | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row
 $offset = '0'; // string | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row
-$status = 'status_example'; // string | 
+$status = 'status_example'; // string
 
 try {
     $result = $apiInstance->getEnclaves($authorization, $created, $limit, $offset, $status);
@@ -430,11 +433,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnclaveServiceApi->getEnclaves: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -455,16 +456,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `killEnclave()`
 
-## killEnclave
-
-> \SplFileObject killEnclave($uuid)
+```php
+killEnclave($uuid): \SplFileObject
+```
 
 
 
@@ -475,12 +477,13 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\EnclaveServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
+$uuid = 'uuid_example'; // string
 
 try {
     $result = $apiInstance->killEnclave($uuid);
@@ -488,11 +491,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnclaveServiceApi->killEnclave: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -509,9 +510,8 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

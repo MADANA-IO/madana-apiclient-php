@@ -4,18 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **string** |  | [optional] 
-**content** | **string[]** |  | [optional] 
-**roothash** | **string** |  | [optional] 
-**default_run_configuration** | [**\OpenAPI\Client\Model\JsonRunConfig**](JsonRunConfig.md) |  | [optional] 
-**published** | **bool** |  | [optional] 
-**uuid** | **string** |  | [optional] 
-**description** | **string** |  | [optional] 
-**ipfs_hash** | **string** |  | [optional] 
-**packages** | **string[]** |  | [optional] 
-**root_hash_offset** | **string** |  | [optional] 
-**size** | **string** |  | [optional] 
+**root_hash_offset** | **string** |  | [optional]
+**name** | **string** |  | [optional]
+**default_run_configuration** | [**\OpenAPI\Client\Model\JsonRunConfig**](JsonRunConfig.md) |  | [optional]
+**content** | **string[]** |  | [optional]
+**size** | **string** |  | [optional]
+**description** | **string** |  | [optional]
+**uuid** | **string** |  | [optional]
+**roothash** | **string** |  | [optional]
+**ipfs_hash** | **string** |  | [optional]
+**packages** | **string[]** |  | [optional]
+**published** | **bool** |  | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

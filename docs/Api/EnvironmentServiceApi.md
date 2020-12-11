@@ -1,24 +1,25 @@
 # OpenAPI\Client\EnvironmentServiceApi
 
-All URIs are relative to *http://api.madana.io/rest*
+All URIs are relative to http://api.madana.io/rest.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteEnvironment**](EnvironmentServiceApi.md#deleteEnvironment) | **DELETE** /environments/{uuid} | 
-[**deleteEnvironmentSubscription**](EnvironmentServiceApi.md#deleteEnvironmentSubscription) | **DELETE** /environments/{uuid}/subscribe | 
-[**getEnvironment**](EnvironmentServiceApi.md#getEnvironment) | **GET** /environments/{uuid} | 
-[**getEnvironments**](EnvironmentServiceApi.md#getEnvironments) | **GET** /environments | Returns UUIDs of existing analyses.
-[**getPublishedEnvironments**](EnvironmentServiceApi.md#getPublishedEnvironments) | **GET** /environments/published | 
-[**getSubscribedEnvironments**](EnvironmentServiceApi.md#getSubscribedEnvironments) | **GET** /environments/subscriptions | 
-[**publishEnvironment**](EnvironmentServiceApi.md#publishEnvironment) | **POST** /environments | 
-[**subscribeEnvironment**](EnvironmentServiceApi.md#subscribeEnvironment) | **POST** /environments/{uuid}/subscribe | 
-[**updateEnvironment**](EnvironmentServiceApi.md#updateEnvironment) | **PUT** /environments/{uuid} | 
+[**deleteEnvironment()**](EnvironmentServiceApi.md#deleteEnvironment) | **DELETE** /environments/{uuid} | 
+[**deleteEnvironmentSubscription()**](EnvironmentServiceApi.md#deleteEnvironmentSubscription) | **DELETE** /environments/{uuid}/subscribe | 
+[**getEnvironment()**](EnvironmentServiceApi.md#getEnvironment) | **GET** /environments/{uuid} | 
+[**getEnvironments()**](EnvironmentServiceApi.md#getEnvironments) | **GET** /environments | Returns UUIDs of existing analyses.
+[**getPublishedEnvironments()**](EnvironmentServiceApi.md#getPublishedEnvironments) | **GET** /environments/published | 
+[**getSubscribedEnvironments()**](EnvironmentServiceApi.md#getSubscribedEnvironments) | **GET** /environments/subscriptions | 
+[**publishEnvironment()**](EnvironmentServiceApi.md#publishEnvironment) | **POST** /environments | 
+[**subscribeEnvironment()**](EnvironmentServiceApi.md#subscribeEnvironment) | **POST** /environments/{uuid}/subscribe | 
+[**updateEnvironment()**](EnvironmentServiceApi.md#updateEnvironment) | **PUT** /environments/{uuid} | 
 
 
+## `deleteEnvironment()`
 
-## deleteEnvironment
-
-> \SplFileObject deleteEnvironment($uuid)
+```php
+deleteEnvironment($uuid): \SplFileObject
+```
 
 
 
@@ -29,12 +30,13 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\EnvironmentServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
+$uuid = 'uuid_example'; // string
 
 try {
     $result = $apiInstance->deleteEnvironment($uuid);
@@ -42,11 +44,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnvironmentServiceApi->deleteEnvironment: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -63,16 +63,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteEnvironmentSubscription()`
 
-## deleteEnvironmentSubscription
-
-> \SplFileObject deleteEnvironmentSubscription($uuid)
+```php
+deleteEnvironmentSubscription($uuid): \SplFileObject
+```
 
 
 
@@ -83,12 +84,13 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\EnvironmentServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
+$uuid = 'uuid_example'; // string
 
 try {
     $result = $apiInstance->deleteEnvironmentSubscription($uuid);
@@ -96,11 +98,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnvironmentServiceApi->deleteEnvironmentSubscription: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -117,16 +117,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getEnvironment()`
 
-## getEnvironment
-
-> \SplFileObject getEnvironment($uuid)
+```php
+getEnvironment($uuid): \SplFileObject
+```
 
 
 
@@ -135,6 +136,7 @@ No authorization required
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\EnvironmentServiceApi(
@@ -142,7 +144,7 @@ $apiInstance = new OpenAPI\Client\Api\EnvironmentServiceApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
+$uuid = 'uuid_example'; // string
 
 try {
     $result = $apiInstance->getEnvironment($uuid);
@@ -150,11 +152,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnvironmentServiceApi->getEnvironment: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -171,16 +171,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getEnvironments()`
 
-## getEnvironments
-
-> \SplFileObject getEnvironments($authorization, $created, $limit, $name, $offset)
+```php
+getEnvironments($authorization, $created, $limit, $name, $offset): \SplFileObject
+```
 
 Returns UUIDs of existing analyses.
 
@@ -191,6 +192,7 @@ Returns UUIDs of existing analyses.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\EnvironmentServiceApi(
@@ -201,7 +203,7 @@ $apiInstance = new OpenAPI\Client\Api\EnvironmentServiceApi(
 $authorization = 'authorization_example'; // string | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 $created = 'true'; // string | - if Queryparam \"created=true\" only the UUIDs of own Requests are shown
 $limit = '30'; // string | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row
-$name = 'name_example'; // string | 
+$name = 'name_example'; // string
 $offset = '0'; // string | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row
 
 try {
@@ -210,11 +212,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnvironmentServiceApi->getEnvironments: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -235,16 +235,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getPublishedEnvironments()`
 
-## getPublishedEnvironments
-
-> \SplFileObject getPublishedEnvironments($limit, $name, $offset)
+```php
+getPublishedEnvironments($limit, $name, $offset): \SplFileObject
+```
 
 
 
@@ -255,14 +256,15 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\EnvironmentServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$limit = '30'; // string | 
-$name = 'name_example'; // string | 
-$offset = '0'; // string | 
+$limit = '30'; // string
+$name = 'name_example'; // string
+$offset = '0'; // string
 
 try {
     $result = $apiInstance->getPublishedEnvironments($limit, $name, $offset);
@@ -270,11 +272,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnvironmentServiceApi->getPublishedEnvironments: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -293,16 +293,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getSubscribedEnvironments()`
 
-## getSubscribedEnvironments
-
-> \SplFileObject getSubscribedEnvironments($limit, $offset)
+```php
+getSubscribedEnvironments($limit, $offset): \SplFileObject
+```
 
 
 
@@ -313,13 +314,14 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\EnvironmentServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$limit = '30'; // string | 
-$offset = '0'; // string | 
+$limit = '30'; // string
+$offset = '0'; // string
 
 try {
     $result = $apiInstance->getSubscribedEnvironments($limit, $offset);
@@ -327,11 +329,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnvironmentServiceApi->getSubscribedEnvironments: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -349,16 +349,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `publishEnvironment()`
 
-## publishEnvironment
-
-> \SplFileObject publishEnvironment($body)
+```php
+publishEnvironment($body): \SplFileObject
+```
 
 
 
@@ -369,12 +370,13 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\EnvironmentServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \OpenAPI\Client\Model\JsonEnvironmentPublishingRequest(); // \OpenAPI\Client\Model\JsonEnvironmentPublishingRequest | 
+$body = new \OpenAPI\Client\Model\JsonEnvironmentPublishingRequest(); // \OpenAPI\Client\Model\JsonEnvironmentPublishingRequest
 
 try {
     $result = $apiInstance->publishEnvironment($body);
@@ -382,11 +384,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnvironmentServiceApi->publishEnvironment: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -402,17 +402,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json, application/xml
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`, `application/xml`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `subscribeEnvironment()`
 
-## subscribeEnvironment
-
-> \SplFileObject subscribeEnvironment($uuid)
+```php
+subscribeEnvironment($uuid): \SplFileObject
+```
 
 
 
@@ -423,12 +424,13 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\EnvironmentServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
+$uuid = 'uuid_example'; // string
 
 try {
     $result = $apiInstance->subscribeEnvironment($uuid);
@@ -436,11 +438,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnvironmentServiceApi->subscribeEnvironment: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -457,16 +457,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `updateEnvironment()`
 
-## updateEnvironment
-
-> \SplFileObject updateEnvironment($uuid, $body)
+```php
+updateEnvironment($uuid, $body): \SplFileObject
+```
 
 
 
@@ -477,13 +478,14 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\EnvironmentServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
-$body = new \OpenAPI\Client\Model\JsonEnvironment(); // \OpenAPI\Client\Model\JsonEnvironment | 
+$uuid = 'uuid_example'; // string
+$body = new \OpenAPI\Client\Model\JsonEnvironment(); // \OpenAPI\Client\Model\JsonEnvironment
 
 try {
     $result = $apiInstance->updateEnvironment($uuid, $body);
@@ -491,11 +493,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnvironmentServiceApi->updateEnvironment: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -512,10 +512,9 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/xml
-- **Accept**: application/json
+- **Content-Type**: `application/json`, `application/xml`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

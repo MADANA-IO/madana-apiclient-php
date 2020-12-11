@@ -1,16 +1,17 @@
 # OpenAPI\Client\OrganizationServiceApi
 
-All URIs are relative to *http://api.madana.io/rest*
+All URIs are relative to http://api.madana.io/rest.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getNodes3**](OrganizationServiceApi.md#getNodes3) | **GET** /organizations | 
+[**getNodes3()**](OrganizationServiceApi.md#getNodes3) | **GET** /organizations | 
 
 
+## `getNodes3()`
 
-## getNodes3
-
-> \SplFileObject getNodes3()
+```php
+getNodes3(): \SplFileObject
+```
 
 
 
@@ -19,6 +20,7 @@ Method | HTTP request | Description
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\OrganizationServiceApi(
@@ -33,7 +35,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling OrganizationServiceApi->getNodes3: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -51,9 +52,8 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

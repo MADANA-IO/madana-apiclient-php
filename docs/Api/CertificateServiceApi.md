@@ -1,18 +1,19 @@
 # OpenAPI\Client\CertificateServiceApi
 
-All URIs are relative to *http://api.madana.io/rest*
+All URIs are relative to http://api.madana.io/rest.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**authenticateCertificate**](CertificateServiceApi.md#authenticateCertificate) | **POST** /certificates | Issues certificates for logged-in users.
-[**getCertificateByFingerprint**](CertificateServiceApi.md#getCertificateByFingerprint) | **GET** /certificates/{fingerprint} | 
-[**getRootCertificate**](CertificateServiceApi.md#getRootCertificate) | **GET** /certificates/root | 
+[**authenticateCertificate()**](CertificateServiceApi.md#authenticateCertificate) | **POST** /certificates | Issues certificates for logged-in users.
+[**getCertificateByFingerprint()**](CertificateServiceApi.md#getCertificateByFingerprint) | **GET** /certificates/{fingerprint} | 
+[**getRootCertificate()**](CertificateServiceApi.md#getRootCertificate) | **GET** /certificates/root | 
 
 
+## `authenticateCertificate()`
 
-## authenticateCertificate
-
-> \OpenAPI\Client\Model\JsonMDNCertificate authenticateCertificate($body)
+```php
+authenticateCertificate($body): \OpenAPI\Client\Model\JsonMDNCertificate
+```
 
 Issues certificates for logged-in users.
 
@@ -25,12 +26,13 @@ Issues certificates for logged-in users
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\CertificateServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \OpenAPI\Client\Model\JsonMDNData(); // \OpenAPI\Client\Model\JsonMDNData | 
+$body = new \OpenAPI\Client\Model\JsonMDNData(); // \OpenAPI\Client\Model\JsonMDNData
 
 try {
     $result = $apiInstance->authenticateCertificate($body);
@@ -38,11 +40,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CertificateServiceApi->authenticateCertificate: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -58,17 +58,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getCertificateByFingerprint()`
 
-## getCertificateByFingerprint
-
-> \SplFileObject getCertificateByFingerprint($fingerprint)
+```php
+getCertificateByFingerprint($fingerprint): \SplFileObject
+```
 
 
 
@@ -79,12 +80,13 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\CertificateServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$fingerprint = 'fingerprint_example'; // string | 
+$fingerprint = 'fingerprint_example'; // string
 
 try {
     $result = $apiInstance->getCertificateByFingerprint($fingerprint);
@@ -92,11 +94,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CertificateServiceApi->getCertificateByFingerprint: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -113,16 +113,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getRootCertificate()`
 
-## getRootCertificate
-
-> \SplFileObject getRootCertificate()
+```php
+getRootCertificate(): \SplFileObject
+```
 
 
 
@@ -131,6 +132,7 @@ No authorization required
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\CertificateServiceApi(
@@ -145,7 +147,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CertificateServiceApi->getRootCertificate: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -163,9 +164,8 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

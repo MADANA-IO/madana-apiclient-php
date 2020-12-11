@@ -1,29 +1,30 @@
 # OpenAPI\Client\RequestServiceApi
 
-All URIs are relative to *http://api.madana.io/rest*
+All URIs are relative to http://api.madana.io/rest.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addData**](RequestServiceApi.md#addData) | **POST** /requests/{uuid}/data | Is used to upload and park the data till the AnalysisRequest gets processed.
-[**cancelProcessing**](RequestServiceApi.md#cancelProcessing) | **POST** /requests/{uuid}/cancel | Endpoint is called from the Analysis Processing entity to submit the result.
-[**createNewRequest**](RequestServiceApi.md#createNewRequest) | **POST** /requests | Endpoint used to create a new Analysis Request.
-[**getActions**](RequestServiceApi.md#getActions) | **GET** /requests/actions | 
-[**getAgent**](RequestServiceApi.md#getAgent) | **GET** /requests/{uuid}/agent | Is called from the APE to request all parked datasets.
-[**getAllRequests**](RequestServiceApi.md#getAllRequests) | **GET** /requests | Returns UUIDs of existing analyses.
-[**getData**](RequestServiceApi.md#getData) | **GET** /requests/{uuid}/data | Is called from the APE to request all parked datasets.
-[**getRequest**](RequestServiceApi.md#getRequest) | **GET** /requests/{uuid} | Returns the details for certain Request.
-[**getResult**](RequestServiceApi.md#getResult) | **GET** /requests/{uuid}/result | Can be called from creator to request the AnalysisResult.
-[**getStatus**](RequestServiceApi.md#getStatus) | **GET** /requests/stats | 
-[**giveConsent**](RequestServiceApi.md#giveConsent) | **POST** /requests/{uuid}/consent | Used to give consent for request.
-[**initRequestParameters**](RequestServiceApi.md#initRequestParameters) | **POST** /requests/{uuid} | Endpoint used initialized addition datacollection parameters for requester.
-[**setAgent**](RequestServiceApi.md#setAgent) | **POST** /requests/{uuid}/agent | Is called from the APE to request all parked datasets.
-[**setResult**](RequestServiceApi.md#setResult) | **POST** /requests/{uuid}/result | Endpoint is called from the Analysis Processing entity to submit the result.
+[**addData()**](RequestServiceApi.md#addData) | **POST** /requests/{uuid}/data | Is used to upload and park the data till the AnalysisRequest gets processed.
+[**cancelProcessing()**](RequestServiceApi.md#cancelProcessing) | **POST** /requests/{uuid}/cancel | Endpoint is called from the Analysis Processing entity to submit the result.
+[**createNewRequest()**](RequestServiceApi.md#createNewRequest) | **POST** /requests | Endpoint used to create a new Analysis Request.
+[**getActions()**](RequestServiceApi.md#getActions) | **GET** /requests/actions | 
+[**getAgent()**](RequestServiceApi.md#getAgent) | **GET** /requests/{uuid}/agent | Is called from the APE to request all parked datasets.
+[**getAllRequests()**](RequestServiceApi.md#getAllRequests) | **GET** /requests | Returns UUIDs of existing analyses.
+[**getData()**](RequestServiceApi.md#getData) | **GET** /requests/{uuid}/data | Is called from the APE to request all parked datasets.
+[**getRequest()**](RequestServiceApi.md#getRequest) | **GET** /requests/{uuid} | Returns the details for certain Request.
+[**getResult()**](RequestServiceApi.md#getResult) | **GET** /requests/{uuid}/result | Can be called from creator to request the AnalysisResult.
+[**getStatus()**](RequestServiceApi.md#getStatus) | **GET** /requests/stats | 
+[**giveConsent()**](RequestServiceApi.md#giveConsent) | **POST** /requests/{uuid}/consent | Used to give consent for request.
+[**initRequestParameters()**](RequestServiceApi.md#initRequestParameters) | **POST** /requests/{uuid} | Endpoint used initialized addition datacollection parameters for requester.
+[**setAgent()**](RequestServiceApi.md#setAgent) | **POST** /requests/{uuid}/agent | Is called from the APE to request all parked datasets.
+[**setResult()**](RequestServiceApi.md#setResult) | **POST** /requests/{uuid}/result | Endpoint is called from the Analysis Processing entity to submit the result.
 
 
+## `addData()`
 
-## addData
-
-> \SplFileObject addData($uuid, $authorization, $body)
+```php
+addData($uuid, $authorization, $body): \SplFileObject
+```
 
 Is used to upload and park the data till the AnalysisRequest gets processed.
 
@@ -36,14 +37,15 @@ Is used to upload and park the data till the AnalysisRequest gets processed
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\RequestServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
+$uuid = 'uuid_example'; // string
 $authorization = 'authorization_example'; // string | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-$body = new \OpenAPI\Client\Model\JsonSignedDataUtils(); // \OpenAPI\Client\Model\JsonSignedDataUtils | 
+$body = new \OpenAPI\Client\Model\JsonSignedDataUtils(); // \OpenAPI\Client\Model\JsonSignedDataUtils
 
 try {
     $result = $apiInstance->addData($uuid, $authorization, $body);
@@ -51,11 +53,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling RequestServiceApi->addData: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -73,17 +73,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `cancelProcessing()`
 
-## cancelProcessing
-
-> \SplFileObject cancelProcessing($uuid, $authorization, $body)
+```php
+cancelProcessing($uuid, $authorization, $body): \SplFileObject
+```
 
 Endpoint is called from the Analysis Processing entity to submit the result.
 
@@ -96,14 +97,15 @@ Endpoint is called from the Analysis Processing entity to submit the result
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\RequestServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
+$uuid = 'uuid_example'; // string
 $authorization = 'authorization_example'; // string | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-$body = new \OpenAPI\Client\Model\JsonSignedDataUtils(); // \OpenAPI\Client\Model\JsonSignedDataUtils | 
+$body = new \OpenAPI\Client\Model\JsonSignedDataUtils(); // \OpenAPI\Client\Model\JsonSignedDataUtils
 
 try {
     $result = $apiInstance->cancelProcessing($uuid, $authorization, $body);
@@ -111,11 +113,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling RequestServiceApi->cancelProcessing: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -133,17 +133,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/xml
-- **Accept**: application/json
+- **Content-Type**: `application/json`, `application/xml`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `createNewRequest()`
 
-## createNewRequest
-
-> string createNewRequest($authorization, $body)
+```php
+createNewRequest($authorization, $body): string
+```
 
 Endpoint used to create a new Analysis Request.
 
@@ -156,13 +157,14 @@ Endpoint used to create a new Analysis Request
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\RequestServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $authorization = 'authorization_example'; // string | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-$body = new \OpenAPI\Client\Model\JsonSignedDataUtils(); // \OpenAPI\Client\Model\JsonSignedDataUtils | 
+$body = new \OpenAPI\Client\Model\JsonSignedDataUtils(); // \OpenAPI\Client\Model\JsonSignedDataUtils
 
 try {
     $result = $apiInstance->createNewRequest($authorization, $body);
@@ -170,11 +172,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling RequestServiceApi->createNewRequest: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -191,17 +191,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/xml
-- **Accept**: application/json
+- **Content-Type**: `application/json`, `application/xml`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getActions()`
 
-## getActions
-
-> \SplFileObject getActions($limit, $offset)
+```php
+getActions($limit, $offset): \SplFileObject
+```
 
 
 
@@ -212,13 +213,14 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\RequestServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$limit = '30'; // string | 
-$offset = '0'; // string | 
+$limit = '30'; // string
+$offset = '0'; // string
 
 try {
     $result = $apiInstance->getActions($limit, $offset);
@@ -226,11 +228,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling RequestServiceApi->getActions: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -248,16 +248,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getAgent()`
 
-## getAgent
-
-> \SplFileObject getAgent($uuid, $authorization)
+```php
+getAgent($uuid, $authorization): \SplFileObject
+```
 
 Is called from the APE to request all parked datasets.
 
@@ -270,12 +271,13 @@ Is called from the APE to request all parked datasets. Returns the transmitted d
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\RequestServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
+$uuid = 'uuid_example'; // string
 $authorization = 'authorization_example'; // string | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 
 try {
@@ -284,11 +286,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling RequestServiceApi->getAgent: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -306,16 +306,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getAllRequests()`
 
-## getAllRequests
-
-> \SplFileObject getAllRequests($authorization, $created, $history, $limit, $new, $offset, $preview, $ready)
+```php
+getAllRequests($authorization, $created, $history, $limit, $new, $offset, $preview, $ready): \SplFileObject
+```
 
 Returns UUIDs of existing analyses.
 
@@ -326,6 +327,7 @@ Returns UUIDs of existing analyses.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\RequestServiceApi(
@@ -339,8 +341,8 @@ $history = 'false'; // string | - if queryparam \"history\" is set to true, endp
 $limit = '30'; // string | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row
 $new = 'true'; // string | -  if Queryparam \"new=true\" only the UUIDs of new Requests ( Requests the user has not participated in and still allow participation) are shown
 $offset = '0'; // string | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row
-$preview = 'false'; // string | 
-$ready = 'false'; // string | 
+$preview = 'false'; // string
+$ready = 'false'; // string
 
 try {
     $result = $apiInstance->getAllRequests($authorization, $created, $history, $limit, $new, $offset, $preview, $ready);
@@ -348,11 +350,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling RequestServiceApi->getAllRequests: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -376,16 +376,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getData()`
 
-## getData
-
-> \OpenAPI\Client\Model\JsonSignedDataUtils getData($uuid, $authorization)
+```php
+getData($uuid, $authorization): \OpenAPI\Client\Model\JsonSignedDataUtils
+```
 
 Is called from the APE to request all parked datasets.
 
@@ -398,12 +399,13 @@ Is called from the APE to request all parked datasets. Returns the transmitted d
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\RequestServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
+$uuid = 'uuid_example'; // string
 $authorization = 'authorization_example'; // string | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 
 try {
@@ -412,11 +414,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling RequestServiceApi->getData: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -434,16 +434,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getRequest()`
 
-## getRequest
-
-> \SplFileObject getRequest($uuid, $authorization)
+```php
+getRequest($uuid, $authorization): \SplFileObject
+```
 
 Returns the details for certain Request.
 
@@ -456,12 +457,13 @@ Returns the details for certain Request. When requesting an analysis a view of t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\RequestServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
+$uuid = 'uuid_example'; // string
 $authorization = 'authorization_example'; // string | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 
 try {
@@ -470,11 +472,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling RequestServiceApi->getRequest: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -492,16 +492,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getResult()`
 
-## getResult
-
-> \SplFileObject getResult($uuid, $authorization)
+```php
+getResult($uuid, $authorization): \SplFileObject
+```
 
 Can be called from creator to request the AnalysisResult.
 
@@ -514,12 +515,13 @@ Can be called from creator to request the AnalysisResult.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\RequestServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
+$uuid = 'uuid_example'; // string
 $authorization = 'authorization_example'; // string | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 
 try {
@@ -528,11 +530,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling RequestServiceApi->getResult: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -550,16 +550,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getStatus()`
 
-## getStatus
-
-> \SplFileObject getStatus()
+```php
+getStatus(): \SplFileObject
+```
 
 
 
@@ -568,6 +569,7 @@ No authorization required
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\RequestServiceApi(
@@ -582,7 +584,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling RequestServiceApi->getStatus: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -600,16 +601,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `giveConsent()`
 
-## giveConsent
-
-> \SplFileObject giveConsent($uuid, $authorization)
+```php
+giveConsent($uuid, $authorization): \SplFileObject
+```
 
 Used to give consent for request.
 
@@ -622,12 +624,13 @@ Used to give consent for request. If the Endpoint is called from the creator of 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\RequestServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
+$uuid = 'uuid_example'; // string
 $authorization = 'authorization_example'; // string | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 
 try {
@@ -636,11 +639,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling RequestServiceApi->giveConsent: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -658,16 +659,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `initRequestParameters()`
 
-## initRequestParameters
-
-> string initRequestParameters($uuid, $authorization, $body)
+```php
+initRequestParameters($uuid, $authorization, $body): string
+```
 
 Endpoint used initialized addition datacollection parameters for requester.
 
@@ -680,14 +682,15 @@ Endpoint used initialized addition datacollection parameters for requester
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\RequestServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
+$uuid = 'uuid_example'; // string
 $authorization = 'authorization_example'; // string | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-$body = 'body_example'; // string | 
+$body = 'body_example'; // string
 
 try {
     $result = $apiInstance->initRequestParameters($uuid, $authorization, $body);
@@ -695,11 +698,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling RequestServiceApi->initRequestParameters: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -717,17 +718,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `setAgent()`
 
-## setAgent
-
-> \SplFileObject setAgent($uuid, $authorization)
+```php
+setAgent($uuid, $authorization): \SplFileObject
+```
 
 Is called from the APE to request all parked datasets.
 
@@ -740,12 +742,13 @@ Is called from the APE to request all parked datasets. Returns the transmitted d
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\RequestServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
+$uuid = 'uuid_example'; // string
 $authorization = 'authorization_example'; // string | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 
 try {
@@ -754,11 +757,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling RequestServiceApi->setAgent: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -776,16 +777,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `setResult()`
 
-## setResult
-
-> \SplFileObject setResult($uuid, $authorization, $body)
+```php
+setResult($uuid, $authorization, $body): \SplFileObject
+```
 
 Endpoint is called from the Analysis Processing entity to submit the result.
 
@@ -798,14 +800,15 @@ Endpoint is called from the Analysis Processing entity to submit the result
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\RequestServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$uuid = 'uuid_example'; // string | 
+$uuid = 'uuid_example'; // string
 $authorization = 'authorization_example'; // string | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-$body = new \OpenAPI\Client\Model\JsonSignedDataUtils(); // \OpenAPI\Client\Model\JsonSignedDataUtils | 
+$body = new \OpenAPI\Client\Model\JsonSignedDataUtils(); // \OpenAPI\Client\Model\JsonSignedDataUtils
 
 try {
     $result = $apiInstance->setResult($uuid, $authorization, $body);
@@ -813,11 +816,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling RequestServiceApi->setResult: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -835,10 +836,9 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/xml
-- **Accept**: application/json
+- **Content-Type**: `application/json`, `application/xml`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

@@ -1,18 +1,19 @@
 # OpenAPI\Client\NodeServiceApi
 
-All URIs are relative to *http://api.madana.io/rest*
+All URIs are relative to http://api.madana.io/rest.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getBootstrap**](NodeServiceApi.md#getBootstrap) | **GET** /nodes/bootstrap | 
-[**getNodes2**](NodeServiceApi.md#getNodes2) | **GET** /nodes | 
-[**postNodeInfo**](NodeServiceApi.md#postNodeInfo) | **POST** /nodes | 
+[**getBootstrap()**](NodeServiceApi.md#getBootstrap) | **GET** /nodes/bootstrap | 
+[**getNodes2()**](NodeServiceApi.md#getNodes2) | **GET** /nodes | 
+[**postNodeInfo()**](NodeServiceApi.md#postNodeInfo) | **POST** /nodes | 
 
 
+## `getBootstrap()`
 
-## getBootstrap
-
-> \SplFileObject getBootstrap()
+```php
+getBootstrap(): \SplFileObject
+```
 
 
 
@@ -21,6 +22,7 @@ Method | HTTP request | Description
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\NodeServiceApi(
@@ -35,7 +37,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling NodeServiceApi->getBootstrap: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -53,16 +54,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getNodes2()`
 
-## getNodes2
-
-> \SplFileObject getNodes2($owner)
+```php
+getNodes2($owner): \SplFileObject
+```
 
 
 
@@ -73,12 +75,13 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\NodeServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$owner = 'owner_example'; // string | 
+$owner = 'owner_example'; // string
 
 try {
     $result = $apiInstance->getNodes2($owner);
@@ -86,11 +89,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling NodeServiceApi->getNodes2: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -107,16 +108,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `postNodeInfo()`
 
-## postNodeInfo
-
-> \SplFileObject postNodeInfo($body)
+```php
+postNodeInfo($body): \SplFileObject
+```
 
 
 
@@ -127,12 +129,13 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\NodeServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \OpenAPI\Client\Model\JsonNodeInfo(); // \OpenAPI\Client\Model\JsonNodeInfo | 
+$body = new \OpenAPI\Client\Model\JsonNodeInfo(); // \OpenAPI\Client\Model\JsonNodeInfo
 
 try {
     $result = $apiInstance->postNodeInfo($body);
@@ -140,11 +143,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling NodeServiceApi->postNodeInfo: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -160,10 +161,9 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json, application/xml
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`, `application/xml`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

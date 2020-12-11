@@ -1,19 +1,20 @@
 # OpenAPI\Client\AccountServiceApi
 
-All URIs are relative to *http://api.madana.io/rest*
+All URIs are relative to http://api.madana.io/rest.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**activateUser**](AccountServiceApi.md#activateUser) | **GET** /account/activation/{token} | 
-[**createPasswordReset**](AccountServiceApi.md#createPasswordReset) | **POST** /account/password | Sends an Password reset mail to the given MailAddress.
-[**requestVerificationMail**](AccountServiceApi.md#requestVerificationMail) | **GET** /account/verifymail | Used to request a new  activation-mail for the user.
-[**updatePassword**](AccountServiceApi.md#updatePassword) | **PUT** /account/password | Receives the Password reset and tries to set the provided password for the user.
+[**activateUser()**](AccountServiceApi.md#activateUser) | **GET** /account/activation/{token} | 
+[**createPasswordReset()**](AccountServiceApi.md#createPasswordReset) | **POST** /account/password | Sends an Password reset mail to the given MailAddress.
+[**requestVerificationMail()**](AccountServiceApi.md#requestVerificationMail) | **GET** /account/verifymail | Used to request a new  activation-mail for the user.
+[**updatePassword()**](AccountServiceApi.md#updatePassword) | **PUT** /account/password | Receives the Password reset and tries to set the provided password for the user.
 
 
+## `activateUser()`
 
-## activateUser
-
-> \SplFileObject activateUser($token)
+```php
+activateUser($token): \SplFileObject
+```
 
 
 
@@ -24,12 +25,13 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\AccountServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$token = 'token_example'; // string | 
+$token = 'token_example'; // string
 
 try {
     $result = $apiInstance->activateUser($token);
@@ -37,11 +39,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AccountServiceApi->activateUser: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -58,16 +58,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+- **Accept**: `application/json`, `application/xml`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `createPasswordReset()`
 
-## createPasswordReset
-
-> \SplFileObject createPasswordReset($body)
+```php
+createPasswordReset($body): \SplFileObject
+```
 
 Sends an Password reset mail to the given MailAddress.
 
@@ -78,6 +79,7 @@ Sends an Password reset mail to the given MailAddress
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\AccountServiceApi(
@@ -93,11 +95,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AccountServiceApi->createPasswordReset: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -113,17 +113,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json, application/xml
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`, `application/xml`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `requestVerificationMail()`
 
-## requestVerificationMail
-
-> map[string,object] requestVerificationMail()
+```php
+requestVerificationMail(): map[string,object]
+```
 
 Used to request a new  activation-mail for the user.
 
@@ -134,6 +135,7 @@ Used to request a new  activation-mail for the user
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\AccountServiceApi(
@@ -148,7 +150,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AccountServiceApi->requestVerificationMail: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -166,16 +167,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `updatePassword()`
 
-## updatePassword
-
-> \SplFileObject updatePassword($body)
+```php
+updatePassword($body): \SplFileObject
+```
 
 Receives the Password reset and tries to set the provided password for the user.
 
@@ -186,6 +188,7 @@ Receives the Password reset and tries to set the provided password for the user.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\AccountServiceApi(
@@ -201,11 +204,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AccountServiceApi->updatePassword: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -221,10 +222,9 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json, application/xml
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`, `application/xml`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

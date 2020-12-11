@@ -1,25 +1,26 @@
 # OpenAPI\Client\UserServiceApi
 
-All URIs are relative to *http://api.madana.io/rest*
+All URIs are relative to http://api.madana.io/rest.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createObject**](UserServiceApi.md#createObject) | **POST** /users | Creates a new user object.
-[**deleteObject**](UserServiceApi.md#deleteObject) | **DELETE** /users/{username} | Deletes an User based on the provided id and securitycontext.
-[**deleteObject_0**](UserServiceApi.md#deleteObject_0) | **DELETE** /users/{username}/social/{platform}/{ident} | Deletes linked account from the user and securitycontext.
-[**getAvatars**](UserServiceApi.md#getAvatars) | **GET** /users/{username}/avatars | 
-[**getCertificates**](UserServiceApi.md#getCertificates) | **GET** /users/{username}/certificates | 
-[**getEnclaveHistory**](UserServiceApi.md#getEnclaveHistory) | **GET** /users/{username}/enclavehistory | 
-[**getObject2**](UserServiceApi.md#getObject2) | **GET** /users/{username} | 
-[**setAvatar**](UserServiceApi.md#setAvatar) | **POST** /users/{username}/avatars | 
-[**setSettings**](UserServiceApi.md#setSettings) | **POST** /users/{username}/settings | 
-[**updateObject**](UserServiceApi.md#updateObject) | **PUT** /users/{username} | Updates Userproperties based on the provided user object.
+[**createObject()**](UserServiceApi.md#createObject) | **POST** /users | Creates a new user object.
+[**deleteObject()**](UserServiceApi.md#deleteObject) | **DELETE** /users/{username} | Deletes an User based on the provided id and securitycontext.
+[**deleteObject_0()**](UserServiceApi.md#deleteObject_0) | **DELETE** /users/{username}/social/{platform}/{ident} | Deletes linked account from the user and securitycontext.
+[**getAvatars()**](UserServiceApi.md#getAvatars) | **GET** /users/{username}/avatars | 
+[**getCertificates()**](UserServiceApi.md#getCertificates) | **GET** /users/{username}/certificates | 
+[**getEnclaveHistory()**](UserServiceApi.md#getEnclaveHistory) | **GET** /users/{username}/enclavehistory | 
+[**getObject2()**](UserServiceApi.md#getObject2) | **GET** /users/{username} | 
+[**setAvatar()**](UserServiceApi.md#setAvatar) | **POST** /users/{username}/avatars | 
+[**setSettings()**](UserServiceApi.md#setSettings) | **POST** /users/{username}/settings | 
+[**updateObject()**](UserServiceApi.md#updateObject) | **PUT** /users/{username} | Updates Userproperties based on the provided user object.
 
 
+## `createObject()`
 
-## createObject
-
-> \SplFileObject createObject($referrer, $body)
+```php
+createObject($referrer, $body): \SplFileObject
+```
 
 Creates a new user object.
 
@@ -32,12 +33,13 @@ Creates a new user object
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\UserServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$referrer = 'referrer_example'; // string | 
+$referrer = 'referrer_example'; // string
 $body = new \OpenAPI\Client\Model\JsonMDNUser(); // \OpenAPI\Client\Model\JsonMDNUser | provided user object inheriting properties and credentials
 
 try {
@@ -46,11 +48,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling UserServiceApi->createObject: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -67,17 +67,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteObject()`
 
-## deleteObject
-
-> \SplFileObject deleteObject($username)
+```php
+deleteObject($username): \SplFileObject
+```
 
 Deletes an User based on the provided id and securitycontext.
 
@@ -90,12 +91,13 @@ Deletes an User based on the provided id and securitycontext
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\UserServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$username = 'username_example'; // string | 
+$username = 'username_example'; // string
 
 try {
     $result = $apiInstance->deleteObject($username);
@@ -103,11 +105,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling UserServiceApi->deleteObject: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -124,16 +124,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+- **Accept**: `application/json`, `application/xml`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteObject_0()`
 
-## deleteObject_0
-
-> \SplFileObject deleteObject_0($ident, $platform, $username)
+```php
+deleteObject_0($ident, $platform, $username): \SplFileObject
+```
 
 Deletes linked account from the user and securitycontext.
 
@@ -146,14 +147,15 @@ Deletes linked account from the user and securitycontext
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\UserServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$ident = 'ident_example'; // string | 
-$platform = 'platform_example'; // string | 
-$username = 'username_example'; // string | 
+$ident = 'ident_example'; // string
+$platform = 'platform_example'; // string
+$username = 'username_example'; // string
 
 try {
     $result = $apiInstance->deleteObject_0($ident, $platform, $username);
@@ -161,11 +163,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling UserServiceApi->deleteObject_0: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -184,16 +184,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+- **Accept**: `application/json`, `application/xml`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getAvatars()`
 
-## getAvatars
-
-> \SplFileObject getAvatars($username)
+```php
+getAvatars($username): \SplFileObject
+```
 
 
 
@@ -204,12 +205,13 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\UserServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$username = 'username_example'; // string | 
+$username = 'username_example'; // string
 
 try {
     $result = $apiInstance->getAvatars($username);
@@ -217,11 +219,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling UserServiceApi->getAvatars: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -238,16 +238,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getCertificates()`
 
-## getCertificates
-
-> \SplFileObject getCertificates($username)
+```php
+getCertificates($username): \SplFileObject
+```
 
 
 
@@ -258,12 +259,13 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\UserServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$username = 'username_example'; // string | 
+$username = 'username_example'; // string
 
 try {
     $result = $apiInstance->getCertificates($username);
@@ -271,11 +273,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling UserServiceApi->getCertificates: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -292,16 +292,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getEnclaveHistory()`
 
-## getEnclaveHistory
-
-> \SplFileObject getEnclaveHistory($username, $limit, $offset)
+```php
+getEnclaveHistory($username, $limit, $offset): \SplFileObject
+```
 
 
 
@@ -312,14 +313,15 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\UserServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$username = 'username_example'; // string | 
-$limit = '30'; // string | 
-$offset = '0'; // string | 
+$username = 'username_example'; // string
+$limit = '30'; // string
+$offset = '0'; // string
 
 try {
     $result = $apiInstance->getEnclaveHistory($username, $limit, $offset);
@@ -327,11 +329,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling UserServiceApi->getEnclaveHistory: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -350,16 +350,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getObject2()`
 
-## getObject2
-
-> \SplFileObject getObject2($username)
+```php
+getObject2($username): \SplFileObject
+```
 
 
 
@@ -370,12 +371,13 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\UserServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$username = 'username_example'; // string | 
+$username = 'username_example'; // string
 
 try {
     $result = $apiInstance->getObject2($username);
@@ -383,11 +385,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling UserServiceApi->getObject2: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -404,16 +404,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `setAvatar()`
 
-## setAvatar
-
-> \SplFileObject setAvatar($username, $body)
+```php
+setAvatar($username, $body): \SplFileObject
+```
 
 
 
@@ -424,13 +425,14 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\UserServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$username = 'username_example'; // string | 
-$body = new \OpenAPI\Client\Model\JsonMDNUserProfileImage(); // \OpenAPI\Client\Model\JsonMDNUserProfileImage | 
+$username = 'username_example'; // string
+$body = new \OpenAPI\Client\Model\JsonMDNUserProfileImage(); // \OpenAPI\Client\Model\JsonMDNUserProfileImage
 
 try {
     $result = $apiInstance->setAvatar($username, $body);
@@ -438,11 +440,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling UserServiceApi->setAvatar: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -459,17 +459,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/xml
-- **Accept**: application/json
+- **Content-Type**: `application/json`, `application/xml`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `setSettings()`
 
-## setSettings
-
-> \SplFileObject setSettings($username, $body)
+```php
+setSettings($username, $body): \SplFileObject
+```
 
 
 
@@ -480,13 +481,14 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\UserServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$username = 'username_example'; // string | 
-$body = new \OpenAPI\Client\Model\JsonMDNUserSetting(); // \OpenAPI\Client\Model\JsonMDNUserSetting | 
+$username = 'username_example'; // string
+$body = new \OpenAPI\Client\Model\JsonMDNUserSetting(); // \OpenAPI\Client\Model\JsonMDNUserSetting
 
 try {
     $result = $apiInstance->setSettings($username, $body);
@@ -494,11 +496,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling UserServiceApi->setSettings: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -515,17 +515,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/xml
-- **Accept**: application/json
+- **Content-Type**: `application/json`, `application/xml`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `updateObject()`
 
-## updateObject
-
-> \SplFileObject updateObject($username, $body)
+```php
+updateObject($username, $body): \SplFileObject
+```
 
 Updates Userproperties based on the provided user object.
 
@@ -538,12 +539,13 @@ Updates Userproperties based on the provided user object
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\UserServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$username = 'username_example'; // string | 
+$username = 'username_example'; // string
 $body = new \OpenAPI\Client\Model\JsonMDNUser(); // \OpenAPI\Client\Model\JsonMDNUser | the new user object inherting all properties that should be change
 
 try {
@@ -552,11 +554,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling UserServiceApi->updateObject: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -573,10 +573,9 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json, application/xml
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`, `application/xml`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

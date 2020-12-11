@@ -1,26 +1,27 @@
 # OpenAPI\Client\AuthenticationServiceApi
 
-All URIs are relative to *http://api.madana.io/rest*
+All URIs are relative to http://api.madana.io/rest.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**authenticateApplication**](AuthenticationServiceApi.md#authenticateApplication) | **POST** /authentication/application | Authenticates a new application and returns the token.
-[**authenticateEthereumWallet**](AuthenticationServiceApi.md#authenticateEthereumWallet) | **POST** /authentication/ethereum/{wallet} | 
-[**authenticateUser**](AuthenticationServiceApi.md#authenticateUser) | **POST** /authentication | Authenticates a new user and returns the token (  forbidden if the credentials cannot be validated ).
-[**authenticateWithEthereumChallenge**](AuthenticationServiceApi.md#authenticateWithEthereumChallenge) | **POST** /authentication/ethereum/{wallet}/challenge | 
-[**getFractalAuthenticationURL**](AuthenticationServiceApi.md#getFractalAuthenticationURL) | **GET** /authentication/fractal | Returns the AUthorization URL to verify a Twitter Accounts.
-[**getNonceForEthereumWallet**](AuthenticationServiceApi.md#getNonceForEthereumWallet) | **GET** /authentication/ethereum/{wallet} | Returns a nonce for the client which is used as content for the to be created signature.
-[**getObject**](AuthenticationServiceApi.md#getObject) | **GET** /authentication | Used to validate the active connection with the API.
-[**getTwitterAuthenticationURL**](AuthenticationServiceApi.md#getTwitterAuthenticationURL) | **GET** /authentication/twitter | Returns the AUthorization URL to verify a Twitter Accounts.
-[**setFacebookUID**](AuthenticationServiceApi.md#setFacebookUID) | **POST** /authentication/facebook | Used as Callback URL when users have successfully authorized their facbeook account.
-[**setFractalUID**](AuthenticationServiceApi.md#setFractalUID) | **POST** /authentication/fractal | 
-[**setTwitterUID**](AuthenticationServiceApi.md#setTwitterUID) | **POST** /authentication/twitter | 
+[**authenticateApplication()**](AuthenticationServiceApi.md#authenticateApplication) | **POST** /authentication/application | Authenticates a new application and returns the token.
+[**authenticateEthereumWallet()**](AuthenticationServiceApi.md#authenticateEthereumWallet) | **POST** /authentication/ethereum/{wallet} | 
+[**authenticateUser()**](AuthenticationServiceApi.md#authenticateUser) | **POST** /authentication | Authenticates a new user and returns the token (  forbidden if the credentials cannot be validated ).
+[**authenticateWithEthereumChallenge()**](AuthenticationServiceApi.md#authenticateWithEthereumChallenge) | **POST** /authentication/ethereum/{wallet}/challenge | 
+[**getFractalAuthenticationURL()**](AuthenticationServiceApi.md#getFractalAuthenticationURL) | **GET** /authentication/fractal | Returns the AUthorization URL to verify a Twitter Accounts.
+[**getNonceForEthereumWallet()**](AuthenticationServiceApi.md#getNonceForEthereumWallet) | **GET** /authentication/ethereum/{wallet} | Returns a nonce for the client which is used as content for the to be created signature.
+[**getObject()**](AuthenticationServiceApi.md#getObject) | **GET** /authentication | Used to validate the active connection with the API.
+[**getTwitterAuthenticationURL()**](AuthenticationServiceApi.md#getTwitterAuthenticationURL) | **GET** /authentication/twitter | Returns the AUthorization URL to verify a Twitter Accounts.
+[**setFacebookUID()**](AuthenticationServiceApi.md#setFacebookUID) | **POST** /authentication/facebook | Used as Callback URL when users have successfully authorized their facbeook account.
+[**setFractalUID()**](AuthenticationServiceApi.md#setFractalUID) | **POST** /authentication/fractal | 
+[**setTwitterUID()**](AuthenticationServiceApi.md#setTwitterUID) | **POST** /authentication/twitter | 
 
 
+## `authenticateApplication()`
 
-## authenticateApplication
-
-> \OpenAPI\Client\Model\JsonMDNToken authenticateApplication($body)
+```php
+authenticateApplication($body): \OpenAPI\Client\Model\JsonMDNToken
+```
 
 Authenticates a new application and returns the token.
 
@@ -31,6 +32,7 @@ Authenticates a new application and returns the token
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\AuthenticationServiceApi(
@@ -46,11 +48,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AuthenticationServiceApi->authenticateApplication: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -66,17 +66,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `authenticateEthereumWallet()`
 
-## authenticateEthereumWallet
-
-> \SplFileObject authenticateEthereumWallet($wallet, $body)
+```php
+authenticateEthereumWallet($wallet, $body): \SplFileObject
+```
 
 
 
@@ -85,6 +86,7 @@ No authorization required
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\AuthenticationServiceApi(
@@ -101,11 +103,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AuthenticationServiceApi->authenticateEthereumWallet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -122,17 +122,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json, application/xml
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`, `application/xml`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `authenticateUser()`
 
-## authenticateUser
-
-> \OpenAPI\Client\Model\JsonMDNToken authenticateUser($body)
+```php
+authenticateUser($body): \OpenAPI\Client\Model\JsonMDNToken
+```
 
 Authenticates a new user and returns the token (  forbidden if the credentials cannot be validated ).
 
@@ -143,6 +144,7 @@ Authenticates a new user and returns the token (  forbidden if the credentials c
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\AuthenticationServiceApi(
@@ -158,11 +160,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AuthenticationServiceApi->authenticateUser: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -178,17 +178,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `authenticateWithEthereumChallenge()`
 
-## authenticateWithEthereumChallenge
-
-> \SplFileObject authenticateWithEthereumChallenge($wallet, $body)
+```php
+authenticateWithEthereumChallenge($wallet, $body): \SplFileObject
+```
 
 
 
@@ -197,6 +198,7 @@ No authorization required
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\AuthenticationServiceApi(
@@ -213,11 +215,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AuthenticationServiceApi->authenticateWithEthereumChallenge: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -234,17 +234,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json, application/xml
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`, `application/xml`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getFractalAuthenticationURL()`
 
-## getFractalAuthenticationURL
-
-> \SplFileObject getFractalAuthenticationURL()
+```php
+getFractalAuthenticationURL(): \SplFileObject
+```
 
 Returns the AUthorization URL to verify a Twitter Accounts.
 
@@ -255,6 +256,7 @@ Returns the AUthorization URL to verify a Twitter Accounts
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\AuthenticationServiceApi(
@@ -269,7 +271,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AuthenticationServiceApi->getFractalAuthenticationURL: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -287,16 +288,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getNonceForEthereumWallet()`
 
-## getNonceForEthereumWallet
-
-> \OpenAPI\Client\Model\JsonMDNToken getNonceForEthereumWallet($wallet, $authorization)
+```php
+getNonceForEthereumWallet($wallet, $authorization): \OpenAPI\Client\Model\JsonMDNToken
+```
 
 Returns a nonce for the client which is used as content for the to be created signature.
 
@@ -307,6 +309,7 @@ Returns a nonce for the client which is used as content for the to be created si
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\AuthenticationServiceApi(
@@ -323,11 +326,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AuthenticationServiceApi->getNonceForEthereumWallet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -345,16 +346,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getObject()`
 
-## getObject
-
-> map[string,object] getObject()
+```php
+getObject(): map[string,object]
+```
 
 Used to validate the active connection with the API.
 
@@ -365,6 +367,7 @@ Used to validate the active connection with the API
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\AuthenticationServiceApi(
@@ -379,7 +382,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AuthenticationServiceApi->getObject: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -397,16 +399,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getTwitterAuthenticationURL()`
 
-## getTwitterAuthenticationURL
-
-> \SplFileObject getTwitterAuthenticationURL()
+```php
+getTwitterAuthenticationURL(): \SplFileObject
+```
 
 Returns the AUthorization URL to verify a Twitter Accounts.
 
@@ -417,6 +420,7 @@ Returns the AUthorization URL to verify a Twitter Accounts
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new OpenAPI\Client\Api\AuthenticationServiceApi(
@@ -431,7 +435,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AuthenticationServiceApi->getTwitterAuthenticationURL: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -449,16 +452,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `setFacebookUID()`
 
-## setFacebookUID
-
-> \SplFileObject setFacebookUID($body)
+```php
+setFacebookUID($body): \SplFileObject
+```
 
 Used as Callback URL when users have successfully authorized their facbeook account.
 
@@ -471,12 +475,13 @@ Used as Callback URL when users have successfully authorized their facbeook acco
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\AuthenticationServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = 'body_example'; // string | 
+$body = 'body_example'; // string
 
 try {
     $result = $apiInstance->setFacebookUID($body);
@@ -484,11 +489,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AuthenticationServiceApi->setFacebookUID: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -504,17 +507,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json, application/xml
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`, `application/xml`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `setFractalUID()`
 
-## setFractalUID
-
-> \SplFileObject setFractalUID($body)
+```php
+setFractalUID($body): \SplFileObject
+```
 
 
 
@@ -525,12 +529,13 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\AuthenticationServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = 'body_example'; // string | 
+$body = 'body_example'; // string
 
 try {
     $result = $apiInstance->setFractalUID($body);
@@ -538,11 +543,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AuthenticationServiceApi->setFractalUID: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -558,17 +561,18 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json, application/xml
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`, `application/xml`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `setTwitterUID()`
 
-## setTwitterUID
-
-> \SplFileObject setTwitterUID($body)
+```php
+setTwitterUID($body): \SplFileObject
+```
 
 
 
@@ -579,12 +583,13 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new OpenAPI\Client\Api\AuthenticationServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \OpenAPI\Client\Model\JsonMDNOAuthToken(); // \OpenAPI\Client\Model\JsonMDNOAuthToken | 
+$body = new \OpenAPI\Client\Model\JsonMDNOAuthToken(); // \OpenAPI\Client\Model\JsonMDNOAuthToken
 
 try {
     $result = $apiInstance->setTwitterUID($body);
@@ -592,11 +597,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AuthenticationServiceApi->setTwitterUID: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -612,10 +615,9 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json, application/xml
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`, `application/xml`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-
