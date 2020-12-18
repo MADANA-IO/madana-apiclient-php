@@ -13,7 +13,6 @@ Method | HTTP request | Description
 [**getEnclaveTypes()**](EnclaveServiceApi.md#getEnclaveTypes) | **GET** /enclaves/types | 
 [**getEnclaves()**](EnclaveServiceApi.md#getEnclaves) | **GET** /enclaves | Returns UUIDs of existing analyses.
 [**killEnclave()**](EnclaveServiceApi.md#killEnclave) | **POST** /enclaves/{uuid}/kill | 
-[**redistTest()**](EnclaveServiceApi.md#redistTest) | **GET** /enclaves/test/redis | 
 
 
 ## `addHistory()`
@@ -499,57 +498,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **string**|  |
-
-### Return type
-
-[**\SplFileObject**](../Model/\SplFileObject.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `redistTest()`
-
-```php
-redistTest(): \SplFileObject
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\EnclaveServiceApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-
-try {
-    $result = $apiInstance->redistTest();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling EnclaveServiceApi->redistTest: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
 
 ### Return type
 
