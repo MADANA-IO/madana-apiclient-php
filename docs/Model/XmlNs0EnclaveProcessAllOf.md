@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **internal_ident** | **string** |  | [optional]
 **internal_remote_control_server** | **string** |  | [optional]
 **internal_wireguard_server** | **string** |  | [optional]
+**kubernetes_enclave** | [**\OpenAPI\Client\Model\XmlNs0KubernetesEnclave**](XmlNs0KubernetesEnclave.md) |  | [optional]
 **port_mapping** | **object** |  | [optional]
 **ports** | [**\OpenAPI\Client\Model\XmlNs0EnclavePort[]**](XmlNs0EnclavePort.md) |  | [optional]
 **process** | [**\OpenAPI\Client\Model\XmlNs0Process**](XmlNs0Process.md) |  | [optional]
