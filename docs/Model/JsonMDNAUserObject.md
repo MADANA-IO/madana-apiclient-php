@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**activated** | **string** |  | [optional]
 **last_active** | **string** |  | [optional]
 **created** | **string** |  | [optional]
-**activated** | **string** |  | [optional]
 **image** | **string** |  | [optional]
 **user_name** | **string** |  | [optional]
 
