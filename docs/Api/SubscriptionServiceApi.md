@@ -1,17 +1,17 @@
-# OpenAPI\Client\SystemServiceApi
+# OpenAPI\Client\SubscriptionServiceApi
 
 All URIs are relative to http://api.madana.io/rest.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAllObjects()**](SystemServiceApi.md#getAllObjects) | **GET** /system/health | 
-[**getApplication2()**](SystemServiceApi.md#getApplication2) | **GET** /system/usage | Return the current application usage.
+[**addFreeSubscription()**](SubscriptionServiceApi.md#addFreeSubscription) | **POST** /subscriptions/free | 
+[**getApplication()**](SubscriptionServiceApi.md#getApplication) | **GET** /subscriptions/active | 
 
 
-## `getAllObjects()`
+## `addFreeSubscription()`
 
 ```php
-getAllObjects(): \SplFileObject
+addFreeSubscription(): \SplFileObject
 ```
 
 
@@ -24,17 +24,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SystemServiceApi(
+$apiInstance = new OpenAPI\Client\Api\SubscriptionServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 
 try {
-    $result = $apiInstance->getAllObjects();
+    $result = $apiInstance->addFreeSubscription();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SystemServiceApi->getAllObjects: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscriptionServiceApi->addFreeSubscription: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -59,15 +59,13 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getApplication2()`
+## `getApplication()`
 
 ```php
-getApplication2(): map[string,object]
+getApplication(): \SplFileObject
 ```
 
-Return the current application usage.
 
-Return the current application usage
 
 ### Example
 
@@ -77,17 +75,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SystemServiceApi(
+$apiInstance = new OpenAPI\Client\Api\SubscriptionServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 
 try {
-    $result = $apiInstance->getApplication2();
+    $result = $apiInstance->getApplication();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SystemServiceApi->getApplication2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscriptionServiceApi->getApplication: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -97,7 +95,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**map[string,object]**
+[**\SplFileObject**](../Model/\SplFileObject.md)
 
 ### Authorization
 

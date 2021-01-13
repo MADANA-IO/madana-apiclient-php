@@ -15,6 +15,7 @@ docs/Api/OrganizationServiceApi.md
 docs/Api/RequestServiceApi.md
 docs/Api/SocialPlatformServiceApi.md
 docs/Api/SocialServiceApi.md
+docs/Api/SubscriptionServiceApi.md
 docs/Api/SystemServiceApi.md
 docs/Api/UserServiceApi.md
 docs/Model/JsonDiskConfig.md
@@ -110,6 +111,7 @@ lib/Api/OrganizationServiceApi.php
 lib/Api/RequestServiceApi.php
 lib/Api/SocialPlatformServiceApi.php
 lib/Api/SocialServiceApi.php
+lib/Api/SubscriptionServiceApi.php
 lib/Api/SystemServiceApi.php
 lib/Api/UserServiceApi.php
 lib/ApiException.php
@@ -210,6 +212,7 @@ test/Api/OrganizationServiceApiTest.php
 test/Api/RequestServiceApiTest.php
 test/Api/SocialPlatformServiceApiTest.php
 test/Api/SocialServiceApiTest.php
+test/Api/SubscriptionServiceApiTest.php
 test/Api/SystemServiceApiTest.php
 test/Api/UserServiceApiTest.php
 test/Model/JsonDiskConfigTest.php
