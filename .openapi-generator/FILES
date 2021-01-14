@@ -10,6 +10,7 @@ docs/Api/CertificateServiceApi.md
 docs/Api/DataCollectionServiceApi.md
 docs/Api/EnclaveServiceApi.md
 docs/Api/EnvironmentServiceApi.md
+docs/Api/InvoiceServiceApi.md
 docs/Api/NodeServiceApi.md
 docs/Api/OrganizationServiceApi.md
 docs/Api/RequestServiceApi.md
@@ -106,6 +107,7 @@ lib/Api/CertificateServiceApi.php
 lib/Api/DataCollectionServiceApi.php
 lib/Api/EnclaveServiceApi.php
 lib/Api/EnvironmentServiceApi.php
+lib/Api/InvoiceServiceApi.php
 lib/Api/NodeServiceApi.php
 lib/Api/OrganizationServiceApi.php
 lib/Api/RequestServiceApi.php
@@ -207,6 +209,7 @@ test/Api/CertificateServiceApiTest.php
 test/Api/DataCollectionServiceApiTest.php
 test/Api/EnclaveServiceApiTest.php
 test/Api/EnvironmentServiceApiTest.php
+test/Api/InvoiceServiceApiTest.php
 test/Api/NodeServiceApiTest.php
 test/Api/OrganizationServiceApiTest.php
 test/Api/RequestServiceApiTest.php

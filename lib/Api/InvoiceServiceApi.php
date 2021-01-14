@@ -1,6 +1,6 @@
 <?php
 /**
- * OrganizationServiceApi
+ * InvoiceServiceApi
  * PHP version 7.2
  *
  * @category Class
@@ -40,14 +40,14 @@ use OpenAPI\Client\HeaderSelector;
 use OpenAPI\Client\ObjectSerializer;
 
 /**
- * OrganizationServiceApi Class Doc Comment
+ * InvoiceServiceApi Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class OrganizationServiceApi
+class InvoiceServiceApi
 {
     /**
      * @var ClientInterface
@@ -116,30 +116,32 @@ class OrganizationServiceApi
     }
 
     /**
-     * Operation getNodes3
+     * Operation getActiveSaaSSubscriptions
      *
+     * @param  string $dayssince dayssince (optional, default to '366')
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SplFileObject
      */
-    public function getNodes3()
+    public function getActiveSaaSSubscriptions($dayssince = '366')
     {
-        list($response) = $this->getNodes3WithHttpInfo();
+        list($response) = $this->getActiveSaaSSubscriptionsWithHttpInfo($dayssince);
         return $response;
     }
 
     /**
-     * Operation getNodes3WithHttpInfo
+     * Operation getActiveSaaSSubscriptionsWithHttpInfo
      *
+     * @param  string $dayssince (optional, default to '366')
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getNodes3WithHttpInfo()
+    public function getActiveSaaSSubscriptionsWithHttpInfo($dayssince = '366')
     {
-        $request = $this->getNodes3Request();
+        $request = $this->getActiveSaaSSubscriptionsRequest($dayssince);
 
         try {
             $options = $this->createHttpClientOption();
@@ -215,17 +217,18 @@ class OrganizationServiceApi
     }
 
     /**
-     * Operation getNodes3Async
+     * Operation getActiveSaaSSubscriptionsAsync
      *
      * 
      *
+     * @param  string $dayssince (optional, default to '366')
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getNodes3Async()
+    public function getActiveSaaSSubscriptionsAsync($dayssince = '366')
     {
-        return $this->getNodes3AsyncWithHttpInfo()
+        return $this->getActiveSaaSSubscriptionsAsyncWithHttpInfo($dayssince)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -234,18 +237,19 @@ class OrganizationServiceApi
     }
 
     /**
-     * Operation getNodes3AsyncWithHttpInfo
+     * Operation getActiveSaaSSubscriptionsAsyncWithHttpInfo
      *
      * 
      *
+     * @param  string $dayssince (optional, default to '366')
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getNodes3AsyncWithHttpInfo()
+    public function getActiveSaaSSubscriptionsAsyncWithHttpInfo($dayssince = '366')
     {
         $returnType = '\SplFileObject';
-        $request = $this->getNodes3Request();
+        $request = $this->getActiveSaaSSubscriptionsRequest($dayssince);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -282,22 +286,30 @@ class OrganizationServiceApi
     }
 
     /**
-     * Create request for operation 'getNodes3'
+     * Create request for operation 'getActiveSaaSSubscriptions'
      *
+     * @param  string $dayssince (optional, default to '366')
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getNodes3Request()
+    public function getActiveSaaSSubscriptionsRequest($dayssince = '366')
     {
 
-        $resourcePath = '/organizations';
+        $resourcePath = '/invoices';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if (is_array($dayssince)) {
+            $dayssince = ObjectSerializer::serializeCollection($dayssince, '', true);
+        }
+        if ($dayssince !== null) {
+            $queryParams['dayssince'] = $dayssince;
+        }
 
 
 
