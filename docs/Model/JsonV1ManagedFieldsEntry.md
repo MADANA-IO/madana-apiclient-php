@@ -5,10 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **api_version** | **string** |  | [optional]
+**fields_v1** | **object** |  | [optional]
 **fields_type** | **string** |  | [optional]
 **time** | **float** |  | [optional]
-**operation** | **string** |  | [optional]
 **manager** | **string** |  | [optional]
-**fields_v1** | **object** |  | [optional]
+**operation** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
