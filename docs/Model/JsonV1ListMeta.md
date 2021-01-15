@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**resource_version** | **string** |  | [optional]
 **remaining_item_count** | **float** |  | [optional]
+**resource_version** | **string** |  | [optional]
 **self_link** | **string** |  | [optional]
 **continue** | **string** |  | [optional]
 
