@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**namespace** | **string** |  | [optional]
-**kind** | **string** |  | [optional]
-**api_version** | **string** |  | [optional]
 **resource_version** | **string** |  | [optional]
+**kind** | **string** |  | [optional]
+**name** | **string** |  | [optional]
+**namespace** | **string** |  | [optional]
 **field_path** | **string** |  | [optional]
 **uid** | **string** |  | [optional]
-**name** | **string** |  | [optional]
+**api_version** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
