@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**activated** | **string** |  | [optional]
 **last_active** | **string** |  | [optional]
-**user_name** | **string** |  | [optional]
 **image** | **string** |  | [optional]
 **created** | **string** |  | [optional]
-**social_accounts** | [**\OpenAPI\Client\Model\JsonMDNSocialUserObject[]**](JsonMDNSocialUserObject.md) |  | [optional]
-**guid** | **string** |  | [optional]
-**settings** | [**\OpenAPI\Client\Model\JsonMDNUserSetting[]**](JsonMDNUserSetting.md) |  | [optional]
+**user_name** | **string** |  | [optional]
+**activated** | **string** |  | [optional]
 **credentials** | [**\OpenAPI\Client\Model\JsonMDNUserCredentials**](JsonMDNUserCredentials.md) |  | [optional]
 **mail** | **string** |  | [optional]
+**guid** | **string** |  | [optional]
+**social_accounts** | [**\OpenAPI\Client\Model\JsonMDNSocialUserObject[]**](JsonMDNSocialUserObject.md) |  | [optional]
+**settings** | [**\OpenAPI\Client\Model\JsonMDNUserSetting[]**](JsonMDNUserSetting.md) |  | [optional]
 **last_name** | **string** |  | [optional]
 **first_name** | **string** |  | [optional]
 

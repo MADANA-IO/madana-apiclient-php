@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**social_accounts** | [**\OpenAPI\Client\Model\JsonMDNSocialUserObject[]**](JsonMDNSocialUserObject.md) |  | [optional]
-**guid** | **string** |  | [optional]
-**settings** | [**\OpenAPI\Client\Model\JsonMDNUserSetting[]**](JsonMDNUserSetting.md) |  | [optional]
 **credentials** | [**\OpenAPI\Client\Model\JsonMDNUserCredentials**](JsonMDNUserCredentials.md) |  | [optional]
 **mail** | **string** |  | [optional]
+**guid** | **string** |  | [optional]
+**social_accounts** | [**\OpenAPI\Client\Model\JsonMDNSocialUserObject[]**](JsonMDNSocialUserObject.md) |  | [optional]
+**settings** | [**\OpenAPI\Client\Model\JsonMDNUserSetting[]**](JsonMDNUserSetting.md) |  | [optional]
 **last_name** | **string** |  | [optional]
 **first_name** | **string** |  | [optional]
 
