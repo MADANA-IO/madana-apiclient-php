@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**using_default_run_config** | **bool** |  | [optional]
 **ports** | [**\OpenAPI\Client\Model\JsonEnclavePort[]**](JsonEnclavePort.md) |  | [optional]
 **enclave_execution_type** | **string** |  | [optional]
+**using_default_run_config** | **bool** |  | [optional]
 **environment_uuid** | **string** |  | [optional]
 **wireguard_public_key** | **string** |  | [optional]
 
