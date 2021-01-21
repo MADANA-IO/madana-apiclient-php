@@ -4,6 +4,7 @@ All URIs are relative to http://api.madana.io/rest.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**cancelSubscription()**](UserServiceApi.md#cancelSubscription) | **POST** /users/{username}/subscriptions/{planname}/cancel | 
 [**createObject()**](UserServiceApi.md#createObject) | **POST** /users | Creates a new user object.
 [**deleteObject()**](UserServiceApi.md#deleteObject) | **DELETE** /users/{username} | Deletes an User based on the provided id and securitycontext.
 [**deleteObject_0()**](UserServiceApi.md#deleteObject_0) | **DELETE** /users/{username}/social/{platform}/{ident} | Deletes linked account from the user and securitycontext.
@@ -15,6 +16,62 @@ Method | HTTP request | Description
 [**setSettings()**](UserServiceApi.md#setSettings) | **POST** /users/{username}/settings | 
 [**updateObject()**](UserServiceApi.md#updateObject) | **PUT** /users/{username} | Updates Userproperties based on the provided user object.
 
+
+## `cancelSubscription()`
+
+```php
+cancelSubscription($planname, $username): \SplFileObject
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UserServiceApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$planname = 'planname_example'; // string
+$username = 'username_example'; // string
+
+try {
+    $result = $apiInstance->cancelSubscription($planname, $username);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UserServiceApi->cancelSubscription: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **planname** | **string**|  |
+ **username** | **string**|  |
+
+### Return type
+
+[**\SplFileObject**](../Model/\SplFileObject.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
 ## `createObject()`
 
