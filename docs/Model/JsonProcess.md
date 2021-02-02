@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**input_stream** | **object** |  | [optional]
 **alive** | **bool** |  | [optional]
+**input_stream** | **object** |  | [optional]
 **error_stream** | **object** |  | [optional]
 **output_stream** | **object** |  | [optional]
 
