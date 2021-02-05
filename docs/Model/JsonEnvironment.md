@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**published** | **bool** |  | [optional]
 **size** | **string** |  | [optional]
-**packages** | **string[]** |  | [optional]
-**uuid** | **string** |  | [optional]
 **root_hash_offset** | **string** |  | [optional]
-**ipfs_hash** | **string** |  | [optional]
+**packages** | **string[]** |  | [optional]
+**published** | **bool** |  | [optional]
 **roothash** | **string** |  | [optional]
-**description** | **string** |  | [optional]
 **content** | **string[]** |  | [optional]
+**ipfs_hash** | **string** |  | [optional]
+**uuid** | **string** |  | [optional]
+**description** | **string** |  | [optional]
 **default_run_configuration** | [**\OpenAPI\Client\Model\JsonRunConfig**](JsonRunConfig.md) |  | [optional]
 **name** | **string** |  | [optional]
 

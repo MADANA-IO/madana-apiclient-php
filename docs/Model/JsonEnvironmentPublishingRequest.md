@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**is_public** | **string** |  | [optional]
-**packages** | **string** |  | [optional]
-**size** | **string** |  | [optional]
-**uuid** | **string** |  | [optional]
-**ipfs_primary_peer** | **string** |  | [optional]
 **content** | **string** |  | [optional]
-**ipfs_hash** | **string** |  | [optional]
-**description** | **string** |  | [optional]
 **name** | **string** |  | [optional]
+**ipfs_hash** | **string** |  | [optional]
+**is_public** | **string** |  | [optional]
+**size** | **string** |  | [optional]
+**description** | **string** |  | [optional]
+**packages** | **string** |  | [optional]
+**ipfs_primary_peer** | **string** |  | [optional]
+**uuid** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
