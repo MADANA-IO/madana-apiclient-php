@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**getEnclave()**](EnclaveServiceApi.md#getEnclave) | **GET** /enclaves/{uuid} | 
 [**getEnclaveTypes()**](EnclaveServiceApi.md#getEnclaveTypes) | **GET** /enclaves/types | 
 [**getEnclaves()**](EnclaveServiceApi.md#getEnclaves) | **GET** /enclaves | Returns UUIDs of existing analyses.
+[**getStats()**](EnclaveServiceApi.md#getStats) | **GET** /enclaves/stats | 
 [**killEnclave()**](EnclaveServiceApi.md#killEnclave) | **POST** /enclaves/{uuid}/kill | 
 
 
@@ -444,6 +445,60 @@ Name | Type | Description  | Notes
  **limit** | **string**| Used for offset pagination. Limit/Offset Paging would look like GET /request?limit&#x3D;20&amp;offset&#x3D;100. This query would return the 20 rows starting with the 100th row | [optional] [default to &#39;30&#39;]
  **offset** | **string**| Used for offset pagination. Limit/Offset Paging would look like GET /request?limit&#x3D;20&amp;offset&#x3D;100. This query would return the 20 rows starting with the 100th row | [optional] [default to &#39;0&#39;]
  **status** | **string**|  | [optional]
+
+### Return type
+
+[**\SplFileObject**](../Model/\SplFileObject.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getStats()`
+
+```php
+getStats($dayssince): \SplFileObject
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\EnclaveServiceApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$dayssince = '30'; // string
+
+try {
+    $result = $apiInstance->getStats($dayssince);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EnclaveServiceApi->getStats: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **dayssince** | **string**|  | [optional] [default to &#39;30&#39;]
 
 ### Return type
 
