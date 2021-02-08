@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**uid** | **string** |  | [optional]
+**name** | **string** |  | [optional]
 **block_owner_deletion** | **bool** |  | [optional]
-**kind** | **string** |  | [optional]
+**uid** | **string** |  | [optional]
 **controller** | **bool** |  | [optional]
 **api_version** | **string** |  | [optional]
-**name** | **string** |  | [optional]
+**kind** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
