@@ -1,6 +1,6 @@
 <?php
 /**
- * XmlNs0NetworkInterfaceTest
+ * JsonNodeRunRequestTest
  *
  * PHP version 7.2
  *
@@ -32,7 +32,7 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * XmlNs0NetworkInterfaceTest Class Doc Comment
+ * JsonNodeRunRequestTest Class Doc Comment
  *
  * @category    Class
  * @description 
@@ -40,7 +40,7 @@ use PHPUnit\Framework\TestCase;
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class XmlNs0NetworkInterfaceTest extends TestCase
+class JsonNodeRunRequestTest extends TestCase
 {
 
     /**
@@ -72,27 +72,27 @@ class XmlNs0NetworkInterfaceTest extends TestCase
     }
 
     /**
-     * Test "XmlNs0NetworkInterface"
+     * Test "JsonNodeRunRequest"
      */
-    public function testXmlNs0NetworkInterface()
+    public function testJsonNodeRunRequest()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "address"
+     * Test attribute "cpu_count"
      */
-    public function testPropertyAddress()
+    public function testPropertyCpuCount()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "subdomain"
      */
-    public function testPropertyName()
+    public function testPropertySubdomain()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

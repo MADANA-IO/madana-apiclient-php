@@ -48,6 +48,7 @@ docs/Model/JsonMDNUserSetting.md
 docs/Model/JsonMDNUserSettingAllOf.md
 docs/Model/JsonNetworkInterface.md
 docs/Model/JsonNodeInfo.md
+docs/Model/JsonNodeRunRequest.md
 docs/Model/JsonProcess.md
 docs/Model/JsonRunConfig.md
 docs/Model/JsonSGXInfo.md
@@ -148,6 +149,7 @@ lib/Model/JsonMDNUserSetting.php
 lib/Model/JsonMDNUserSettingAllOf.php
 lib/Model/JsonNetworkInterface.php
 lib/Model/JsonNodeInfo.php
+lib/Model/JsonNodeRunRequest.php
 lib/Model/JsonProcess.php
 lib/Model/JsonRunConfig.php
 lib/Model/JsonSGXInfo.php
@@ -247,6 +249,7 @@ test/Model/JsonMDNUserSettingTest.php
 test/Model/JsonMDNUserTest.php
 test/Model/JsonNetworkInterfaceTest.php
 test/Model/JsonNodeInfoTest.php
+test/Model/JsonNodeRunRequestTest.php
 test/Model/JsonProcessTest.php
 test/Model/JsonRunConfigTest.php
 test/Model/JsonSGXInfoTest.php

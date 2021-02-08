@@ -1,6 +1,6 @@
 <?php
 /**
- * JsonV1EventList
+ * JsonNodeRunRequest
  *
  * PHP version 7.2
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * JsonV1EventList Class Doc Comment
+ * JsonNodeRunRequest Class Doc Comment
  *
  * @category Class
  * @description 
@@ -44,7 +44,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null  
  */
-class JsonV1EventList implements ModelInterface, ArrayAccess, \JsonSerializable
+class JsonNodeRunRequest implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -53,7 +53,7 @@ class JsonV1EventList implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'json_V1EventList';
+    protected static $openAPIModelName = 'json_NodeRunRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -61,10 +61,8 @@ class JsonV1EventList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'metadata' => '\OpenAPI\Client\Model\JsonV1ListMeta',
-        'api_version' => 'string',
-        'kind' => 'string',
-        'items' => '\OpenAPI\Client\Model\JsonV1Event[]'
+        'cpu_count' => 'string',
+        'subdomain' => 'string'
     ];
 
     /**
@@ -75,10 +73,8 @@ class JsonV1EventList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'metadata' => null,
-        'api_version' => null,
-        'kind' => null,
-        'items' => null
+        'cpu_count' => null,
+        'subdomain' => null
     ];
 
     /**
@@ -108,10 +104,8 @@ class JsonV1EventList implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'metadata' => 'metadata',
-        'api_version' => 'apiVersion',
-        'kind' => 'kind',
-        'items' => 'items'
+        'cpu_count' => 'cpuCount',
+        'subdomain' => 'subdomain'
     ];
 
     /**
@@ -120,10 +114,8 @@ class JsonV1EventList implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'metadata' => 'setMetadata',
-        'api_version' => 'setApiVersion',
-        'kind' => 'setKind',
-        'items' => 'setItems'
+        'cpu_count' => 'setCpuCount',
+        'subdomain' => 'setSubdomain'
     ];
 
     /**
@@ -132,10 +124,8 @@ class JsonV1EventList implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'metadata' => 'getMetadata',
-        'api_version' => 'getApiVersion',
-        'kind' => 'getKind',
-        'items' => 'getItems'
+        'cpu_count' => 'getCpuCount',
+        'subdomain' => 'getSubdomain'
     ];
 
     /**
@@ -198,10 +188,8 @@ class JsonV1EventList implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['metadata'] = $data['metadata'] ?? null;
-        $this->container['api_version'] = $data['api_version'] ?? null;
-        $this->container['kind'] = $data['kind'] ?? null;
-        $this->container['items'] = $data['items'] ?? null;
+        $this->container['cpu_count'] = $data['cpu_count'] ?? null;
+        $this->container['subdomain'] = $data['subdomain'] ?? null;
     }
 
     /**
@@ -229,97 +217,49 @@ class JsonV1EventList implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets metadata
-     *
-     * @return \OpenAPI\Client\Model\JsonV1ListMeta|null
-     */
-    public function getMetadata()
-    {
-        return $this->container['metadata'];
-    }
-
-    /**
-     * Sets metadata
-     *
-     * @param \OpenAPI\Client\Model\JsonV1ListMeta|null $metadata metadata
-     *
-     * @return self
-     */
-    public function setMetadata($metadata)
-    {
-        $this->container['metadata'] = $metadata;
-
-        return $this;
-    }
-
-    /**
-     * Gets api_version
+     * Gets cpu_count
      *
      * @return string|null
      */
-    public function getApiVersion()
+    public function getCpuCount()
     {
-        return $this->container['api_version'];
+        return $this->container['cpu_count'];
     }
 
     /**
-     * Sets api_version
+     * Sets cpu_count
      *
-     * @param string|null $api_version 
+     * @param string|null $cpu_count 
      *
      * @return self
      */
-    public function setApiVersion($api_version)
+    public function setCpuCount($cpu_count)
     {
-        $this->container['api_version'] = $api_version;
+        $this->container['cpu_count'] = $cpu_count;
 
         return $this;
     }
 
     /**
-     * Gets kind
+     * Gets subdomain
      *
      * @return string|null
      */
-    public function getKind()
+    public function getSubdomain()
     {
-        return $this->container['kind'];
+        return $this->container['subdomain'];
     }
 
     /**
-     * Sets kind
+     * Sets subdomain
      *
-     * @param string|null $kind 
+     * @param string|null $subdomain 
      *
      * @return self
      */
-    public function setKind($kind)
+    public function setSubdomain($subdomain)
     {
-        $this->container['kind'] = $kind;
-
-        return $this;
-    }
-
-    /**
-     * Gets items
-     *
-     * @return \OpenAPI\Client\Model\JsonV1Event[]|null
-     */
-    public function getItems()
-    {
-        return $this->container['items'];
-    }
-
-    /**
-     * Sets items
-     *
-     * @param \OpenAPI\Client\Model\JsonV1Event[]|null $items 
-     *
-     * @return self
-     */
-    public function setItems($items)
-    {
-        $this->container['items'] = $items;
+        $this->container['subdomain'] = $subdomain;
 
         return $this;
     }
