@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ports** | [**\OpenAPI\Client\Model\JsonEnclavePort[]**](JsonEnclavePort.md) |  | [optional]
 **using_default_run_config** | **bool** |  | [optional]
+**ports** | [**\OpenAPI\Client\Model\JsonEnclavePort[]**](JsonEnclavePort.md) |  | [optional]
 **environment_uuid** | **string** |  | [optional]
 **enclave_execution_type** | **string** |  | [optional]
 **wireguard_public_key** | **string** |  | [optional]
