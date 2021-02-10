@@ -45,7 +45,7 @@ $apiInstance = new OpenAPI\Client\Api\RequestServiceApi(
 );
 $uuid = 'uuid_example'; // string
 $authorization = 'authorization_example'; // string | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-$body = new \OpenAPI\Client\Model\JsonSignedDataUtils(); // \OpenAPI\Client\Model\JsonSignedDataUtils
+$body = new \OpenAPI\Client\Model\JsonSignedData(); // \OpenAPI\Client\Model\JsonSignedData
 
 try {
     $result = $apiInstance->addData($uuid, $authorization, $body);
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **string**|  |
  **authorization** | **string**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional]
- **body** | [**\OpenAPI\Client\Model\JsonSignedDataUtils**](../Model/JsonSignedDataUtils.md)|  | [optional]
+ **body** | [**\OpenAPI\Client\Model\JsonSignedData**](../Model/JsonSignedData.md)|  | [optional]
 
 ### Return type
 
@@ -105,7 +105,7 @@ $apiInstance = new OpenAPI\Client\Api\RequestServiceApi(
 );
 $uuid = 'uuid_example'; // string
 $authorization = 'authorization_example'; // string | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-$body = new \OpenAPI\Client\Model\JsonSignedDataUtils(); // \OpenAPI\Client\Model\JsonSignedDataUtils
+$body = new \OpenAPI\Client\Model\JsonSignedData(); // \OpenAPI\Client\Model\JsonSignedData
 
 try {
     $result = $apiInstance->cancelProcessing($uuid, $authorization, $body);
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **string**|  |
  **authorization** | **string**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional]
- **body** | [**\OpenAPI\Client\Model\JsonSignedDataUtils**](../Model/JsonSignedDataUtils.md)|  | [optional]
+ **body** | [**\OpenAPI\Client\Model\JsonSignedData**](../Model/JsonSignedData.md)|  | [optional]
 
 ### Return type
 
@@ -164,7 +164,7 @@ $apiInstance = new OpenAPI\Client\Api\RequestServiceApi(
     new GuzzleHttp\Client()
 );
 $authorization = 'authorization_example'; // string | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-$body = new \OpenAPI\Client\Model\JsonSignedDataUtils(); // \OpenAPI\Client\Model\JsonSignedDataUtils
+$body = new \OpenAPI\Client\Model\JsonSignedData(); // \OpenAPI\Client\Model\JsonSignedData
 
 try {
     $result = $apiInstance->createNewRequest($authorization, $body);
@@ -179,7 +179,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional]
- **body** | [**\OpenAPI\Client\Model\JsonSignedDataUtils**](../Model/JsonSignedDataUtils.md)|  | [optional]
+ **body** | [**\OpenAPI\Client\Model\JsonSignedData**](../Model/JsonSignedData.md)|  | [optional]
 
 ### Return type
 
@@ -385,7 +385,7 @@ No authorization required
 ## `getData()`
 
 ```php
-getData($uuid, $authorization): \OpenAPI\Client\Model\JsonSignedDataUtils
+getData($uuid, $authorization): \OpenAPI\Client\Model\JsonSignedData
 ```
 
 Is called from the APE to request all parked datasets.
@@ -425,7 +425,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\JsonSignedDataUtils**](../Model/JsonSignedDataUtils.md)
+[**\OpenAPI\Client\Model\JsonSignedData**](../Model/JsonSignedData.md)
 
 ### Authorization
 
@@ -808,7 +808,7 @@ $apiInstance = new OpenAPI\Client\Api\RequestServiceApi(
 );
 $uuid = 'uuid_example'; // string
 $authorization = 'authorization_example'; // string | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-$body = new \OpenAPI\Client\Model\JsonSignedDataUtils(); // \OpenAPI\Client\Model\JsonSignedDataUtils
+$body = new \OpenAPI\Client\Model\JsonSignedData(); // \OpenAPI\Client\Model\JsonSignedData
 
 try {
     $result = $apiInstance->setResult($uuid, $authorization, $body);
@@ -824,7 +824,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **string**|  |
  **authorization** | **string**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional]
- **body** | [**\OpenAPI\Client\Model\JsonSignedDataUtils**](../Model/JsonSignedDataUtils.md)|  | [optional]
+ **body** | [**\OpenAPI\Client\Model\JsonSignedData**](../Model/JsonSignedData.md)|  | [optional]
 
 ### Return type
 

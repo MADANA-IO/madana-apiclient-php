@@ -53,7 +53,6 @@ docs/Model/JsonProcess.md
 docs/Model/JsonRunConfig.md
 docs/Model/JsonSGXInfo.md
 docs/Model/JsonSignedData.md
-docs/Model/JsonSignedDataUtils.md
 docs/Model/JsonV1Event.md
 docs/Model/JsonV1EventList.md
 docs/Model/JsonV1EventSeries.md
@@ -154,7 +153,6 @@ lib/Model/JsonProcess.php
 lib/Model/JsonRunConfig.php
 lib/Model/JsonSGXInfo.php
 lib/Model/JsonSignedData.php
-lib/Model/JsonSignedDataUtils.php
 lib/Model/JsonV1Event.php
 lib/Model/JsonV1EventList.php
 lib/Model/JsonV1EventSeries.php
@@ -254,7 +252,6 @@ test/Model/JsonProcessTest.php
 test/Model/JsonRunConfigTest.php
 test/Model/JsonSGXInfoTest.php
 test/Model/JsonSignedDataTest.php
-test/Model/JsonSignedDataUtilsTest.php
 test/Model/JsonV1EventListTest.php
 test/Model/JsonV1EventSeriesTest.php
 test/Model/JsonV1EventSourceTest.php
