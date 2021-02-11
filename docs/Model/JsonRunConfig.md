@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**run** | **string** |  | [optional]
 **args** | **string[]** |  | [optional]
+**run** | **string** |  | [optional]
 **disk_config** | [**\OpenAPI\Client\Model\JsonDiskConfig[]**](JsonDiskConfig.md) |  | [optional]
 **environment** | **map[string,string]** |  | [optional]
 
